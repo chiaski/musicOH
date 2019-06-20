@@ -1,0 +1,3 @@
+Application name	music OH
+API key	2fd3bf50e7a74d91d84e9a0a816153f2
+Shared secret	7d1b638c1693bfb397790d35436bbd72
