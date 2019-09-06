@@ -32,11 +32,18 @@ function testFetch(artist) {
 
         })
         .then(function (myJson) {
-            console.log(myJson.topalbums.album)
 
-            displayAlbums(myJson.topalbums);
+            //If artist query doesn't work
+            if ("error" in myJson) {
+                console.log("Doesn't exist!");
+            } else {
 
-            artistQuery = JSON.stringify(myJson.topalbums.album);
+                console.log(myJson.topalbums.album)
+
+                displayAlbums(myJson.topalbums);
+
+                artistQuery = JSON.stringify(myJson.topalbums.album);
+            }
             //console.log("Artist Query:" + artistQuery);
         });
 }
