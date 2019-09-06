@@ -37,9 +37,9 @@
 
 
             <fieldset>
-                <form>
-                    <input name="Album" type="text" class="input-finder" placeholder="Enter an Album">
-                    <input type="button" class="ghost-button" value="Generate" onclick="displayRender();s">
+                <form onSubmit="return false">
+                    <input class="input-finder" id="input-finders" placeholder="Enter an Album">
+                    <input type="button" id="generateAlbums" class="ghost-button" value="Generate" onclick="displayRender();">
                 </form>
             </fieldset>
 
@@ -58,6 +58,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+
     </script>
 
     <script src="main.js"></script>

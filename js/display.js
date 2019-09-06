@@ -2,36 +2,34 @@
 
 console.log("This is display.")
 
-var artistQuery;
-var artistSearch;
+var artistSearch; // i.e. "Car Seat Headrest"
+var artistQuery; // contains artist/album information
 
 function convert(string) {
     return string.replace(/ /g, "+");
 }
 
-/*
-$("#generateAlbums").keyup(function (event) {
-    // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13) {
-        console.log("Pressed enter");
-        // Cancel the default action, if needed
-        // event.preventDefault();
 
-        //   displayRender();
+// Listen to keypress on main
 
-        // Trigger the button element with a click
-        // document.getElementById("generateAlbums").click();
+$(".input-finder").keypress(function (event) {
+
+    if (event.keyCode === 13) { // 13 is "enter"
+        event.preventDefault(); // Cancel page reloed
+        displayRender(); //displayRender fetches 
     }
-});*/
+
+});
+
+
 
 // Called when user inputs an album name and hits Generate
 function displayRender() {
-    // artistSearch = "Snail Mail";
 
     artistSearch = $('.input-finder').val();
-    console.log(artistSearch);
+    console.log(artistSearch); // log the results of the artist being searched, for reference
     artistSearch = convert(artistSearch);
-    testFetch(artistSearch);
+    testFetch(artistSearch); // perform artist search
 
 }
 

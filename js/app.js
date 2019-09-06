@@ -1,4 +1,5 @@
-/* Fetch Data Test */
+/* Main App Module
+to be fixed later */
 
 console.log("app.js is loaded");
 
