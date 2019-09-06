@@ -1,0 +1,25 @@
+{
+  "name": "musicoh",
+  "version": "1.0.0",
+  "description": "music music music",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "html2canvas": "^1.0.0-rc.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiaski/musicOH.git"
+  },
+  "author": "Chia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chiaski/musicOH/issues"
+  },
+  "homepage": "https://github.com/chiaski/musicOH#readme"
+}
