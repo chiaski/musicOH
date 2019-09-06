@@ -9,6 +9,20 @@ function convert(string) {
     return string.replace(/ /g, "+");
 }
 
+/*
+$("#generateAlbums").keyup(function (event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+        console.log("Pressed enter");
+        // Cancel the default action, if needed
+        // event.preventDefault();
+
+        //   displayRender();
+
+        // Trigger the button element with a click
+        // document.getElementById("generateAlbums").click();
+    }
+});*/
 
 // Called when user inputs an album name and hits Generate
 function displayRender() {
@@ -40,8 +54,8 @@ function testFetch(artist) {
 
                 console.log(myJson.topalbums.album)
 
+                // Display them on the entry areaß
                 displayAlbums(myJson.topalbums);
-
                 artistQuery = JSON.stringify(myJson.topalbums.album);
             }
             //console.log("Artist Query:" + artistQuery);
@@ -58,6 +72,9 @@ function testFetch(artist) {
 function displayAlbums(artistQuery) {
     console.log('running!');
     console.log(artistQuery);
+
+    $(".album-list").text(""); // Clera album listing
+
     for (var i = 0; i < artistQuery.album.length; i++) {
 
         var albumContent;
