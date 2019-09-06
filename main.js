@@ -12,6 +12,8 @@ function convert(string) {
 }
 
 
+/* http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=602cdfee63f450d681a00c86afca33c5&artist=Cher&album=Believe&format=json */
+
 var key = '602cdfee63f450d681a00c86afca33c5';
 
 
@@ -29,3 +31,21 @@ function getThing(artist, album) {
 
 
 }
+
+
+/* Notes */
+
+/* 
+
+GET JSON OBJECT FOR TOP ALBUM
+
+fetch('http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=The+Hotelier&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
+  .then(function(response) {
+    return response.json();
+
+  })
+  .then(function(myJson) {
+	console.log(myJson.topalbums)
+  });
+  
+*/
