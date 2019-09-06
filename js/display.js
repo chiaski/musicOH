@@ -22,27 +22,55 @@ var displayQuery = function () {
 
     // fetchMusic(artist or album)
 
+
+    function imgay() {
+        console.log("Yes you are gay!");
+    };
+
+
+
+    function getArtist(music) {
+        fetch('http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + music + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
+            .then(function (response) {
+                // return response.json();
+                return response.json();
+            })
+            .then(function (myJson) {
+                console.log("SEARCHING: Artist");
+                if ("error" in myJson) {
+                    console.log("Not found!");
+                    // Try with album>
+                    getAlbum(music);
+                } else {
+                    //return myJson.topalbums;
+                    artistQuery = myJson.topalbums;
+                    displayQuery.displayAlbums(artistQuery);
+                    console.log(myJson.topalbums);
+                }
+            })
+    }
+
+    function getAlbum(music) {
+        fetch('http://ws.audioscrobbler.com/2.0/?method=album.search&album=' + music + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
+            .then(function (response) {
+                // return response.json();
+                return response.json();
+            })
+            .then(function (myJson) {
+                console.log("SEARCHING: Album");
+
+                artistQuery = myJson.results.albummatches;
+                displayQuery.displayAlbums(artistQuery);
+                console.log(myJson.results);
+
+            })
+    }
+
     function fetchMusic(music) {
 
-        function getArtist(music) {
-            fetch('http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + music + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
-                .then(function (response) {
-                    // return response.json();
-                    return response.topalbums;
-                })
-                .then(function (myJson) {
-                    console.log(myJson);
-                })
-        }
+        displayQuery.getArtist(music);
 
-        function getAlbum(music) {
-            fetch('http://ws.audioscrobbler.com/2.0/?method=album.search&album=' + music + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
-                .then(function (response) {
-                    // return response.json();
-                    return response.results.albummatches;
-                })
-        }
-
+        /*
         // Get first key of the query
         switch (Object.keys(displayQuery.fetchMusic().getArtist(music))[0]) {
             case "topalbums":
@@ -60,7 +88,8 @@ var displayQuery = function () {
 
                 displayQuery.displayAlbums(newquery);
 
-        }
+        } */
+
         /*
         if ("error" in displayQuery.fetchMusic(music).getQuery(music)) {
             console.log("Query doesn't exist!")
@@ -105,20 +134,20 @@ var displayQuery = function () {
                 $(".album-list").append(albumContent);
             } else {
                 badsearch++;
-                console.log("bad search:" + badsearch);
+                // console.log("bad search:" + badsearch);
             }
 
 
-            console.log(artistQuery.album.length);
+            //console.log(artistQuery.album.length);
 
             // If lots of bad searches, retry with albums
             if (badsearch >= artistQuery.album.length) {
                 console.log("yo");
 
                 var getqueryagain = convert($('.input-finder').val());
-                console.log(getqueryagain);
-                getqueryagain = displayQuery.fetchMusic().getQuery(getqueryagain);
-                displayQuery.displayAlbums(getqueryagain);
+
+                // let's try the after
+                displayQuery.getAlbum(getqueryagain);
 
             }
 
@@ -128,9 +157,11 @@ var displayQuery = function () {
     return {
         displayAlbums: displayAlbums,
         render: render,
-        fetchMusic: fetchMusic
+        fetchMusic: fetchMusic,
+        imgay: imgay,
+        getArtist: getArtist,
+        getAlbum: getAlbum
     }
-
 
 
 }();
