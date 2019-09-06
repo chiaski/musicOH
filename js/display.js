@@ -22,8 +22,51 @@ var displayQuery = function () {
 
     // fetchMusic(artist or album)
 
-    function fetchMusic(artist) {
-        fetch('http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + artist + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
+    function fetchMusic(music) {
+
+        function getArtist(music) {
+            fetch('http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + music + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
+                .then(function (response) {
+                    // return response.json();
+                    return response.topalbums;
+                })
+                .then(function (myJson) {
+                    console.log(myJson);
+                })
+        }
+
+        function getAlbum(music) {
+            fetch('http://ws.audioscrobbler.com/2.0/?method=album.search&album=' + music + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
+                .then(function (response) {
+                    // return response.json();
+                    return response.results.albummatches;
+                })
+        }
+
+        // Get first key of the query
+        switch (Object.keys(displayQuery.fetchMusic().getArtist(music))[0]) {
+            case "topalbums":
+                artistQuery = displayQuery.fetchMusic().getArtist(music);
+                displayQuery.displayAlbums(artistQuery);
+
+                break;
+
+            case "error":
+                console.log("Query doesn't exist!");
+                break;
+
+            default:
+                var newquery = displayQuery.fetchMusic(music).getAlbum(music);
+
+                displayQuery.displayAlbums(newquery);
+
+        }
+        /*
+        if ("error" in displayQuery.fetchMusic(music).getQuery(music)) {
+            console.log("Query doesn't exist!")
+        } else
+
+            fetch('http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + music + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
             .then(function (response) {
                 return response.json();
             })
@@ -31,34 +74,54 @@ var displayQuery = function () {
                 //If artist query doesn't work
                 if ("error" in myJson) {
                     console.log("Doesn't exist!");
-                } else {
-                    // Display sample
-                    console.log(myJson.topalbums.album)
+                } else if ("results" in myJson) {
 
+                    console.log("NOTICE: Searching albums");
+                    var album = displayQuery.fetchMusic().getQuery(1, music);
+                    displayQuery.displayAlbums(album);
+                } else {
+                    console.log("NOTICE: Searching artists");
                     // Display them on the entry area
                     displayQuery.displayAlbums(myJson.topalbums);
                     artistQuery = JSON.stringify(myJson.topalbums.album);
                 }
                 //console.log("Artist Query:" + artistQuery);
-            });
+            });*/
     }
 
 
     function displayAlbums(artistQuery) {
-        console.log('running!');
         console.log(artistQuery);
 
         $(".album-list").text(""); // Clera album listing
+        var badsearch = 0;
 
         for (var i = 0; i < artistQuery.album.length; i++) {
 
             var albumContent = "<div class='album-type'><img src='" + artistQuery.album[i].image[2]['#text'] + "'></div>";
-            console.log(albumContent);
 
             // Only append the album image to the album selector if there exists an URL for it
             if (artistQuery.album[i].image[2]['#text'].length !== 0) {
                 $(".album-list").append(albumContent);
+            } else {
+                badsearch++;
+                console.log("bad search:" + badsearch);
             }
+
+
+            console.log(artistQuery.album.length);
+
+            // If lots of bad searches, retry with albums
+            if (badsearch >= artistQuery.album.length) {
+                console.log("yo");
+
+                var getqueryagain = convert($('.input-finder').val());
+                console.log(getqueryagain);
+                getqueryagain = displayQuery.fetchMusic().getQuery(getqueryagain);
+                displayQuery.displayAlbums(getqueryagain);
+
+            }
+
         }
     }
 
@@ -84,15 +147,3 @@ $(".input-finder").keypress(function (event) {
     }
 
 });
-
-
-
-
-
-/* 
-jQuery('<div/>', {
-    id: 'some-id',
-    "class": 'some-class',
-    title: 'now this div has a title!'
-}).appendTo('#mySelector');
-*/
