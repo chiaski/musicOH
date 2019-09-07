@@ -123,7 +123,14 @@
 }
 
 .search-area input[type=search] {
+    display: inline-block;
     border: 1px solid black;
     padding: .5em;
     width: 80%;
+}
+
+.search-area button {
+    background: #fff;
+    border: 1px solid #000;
+    margin: .3em;
 }
