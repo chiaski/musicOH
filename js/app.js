@@ -77,12 +77,25 @@ const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wr
 
 function saveImage() {
 
+    /* save image */
     domtoimage.toBlob(document.getElementById('collage'))
         .then(function (blob) {
-            window.saveAs(blob, 'my-node.png');
+            window.saveAs(blob, 'collageOH.png');
 
         });
 
+
+    /* append to div */
+    /*
+    html2canvas(document.getElementById(collage), {
+        useCORS: true,
+        onrendered: (canvas) => {
+            download(canvas.toDataURL(), "map.png", "image/png"); // Call to global js plugin
+        }
+    });*/
+
+
+    /* Append image to a div */
 
     domtoimage.toPng(document.getElementById('collage')).then(function (dataUrl) {
         var img = new Image();
@@ -92,34 +105,10 @@ function saveImage() {
         console.error('oops, something went wrong!', error);
     });
 
-    /*
-    domtoimage
-        .toBlob(document.getElementById("collage"))
-        .then(function (blob) {
-            saveBlobAsFile(blob, "XX.png");
-        });
-    // this function is to convert blob to base64 img
-    function saveBlobAsFile(blob, fileName) {
-        var reader = new FileReader();
-        reader.onloadend = function () {
-            var base64 = reader.result;
-            var img = document.createElement("img");
-            img.classList.add("me-img");
-            img.setAttribute("src", base64);
-            // insert the img to dom
-            document.getElementById("image-test").appendChild(img);
-        };
-        reader.readAsDataURL(blob);
-    }*/
 
-    /*
-    var target = $('#collage-wrapper');
-
-    html2canvas(target.get(0)).then(function (canvas) {
-        console.log(canvas);
-    });*/
 
 }
+
 /*
 function PrintDiv() {
     var saveimage = $('.saveimage');
@@ -130,17 +119,7 @@ function PrintDiv() {
         }
     });
 }
-
-function downloadURI(uri, name) {
-    var link = document.createElement("a");
-
-    link.download = name;
-    link.href = uri;
-    document.body.appendChild(link);
-    link.click();
-    //after creating link you should delete dynamic link
-    //clearDynamicLink(link); 
-}*/
+*/
 
 
 
