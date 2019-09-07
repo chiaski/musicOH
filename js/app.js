@@ -45,6 +45,26 @@ $(document).on("click", ".album-type img", function () {
 });
 
 
+/*
+const swappable = new Swappable(document.querySelectorAll('.album-box'), {
+    draggable: '.album-box'
+});
+
+swappable.on('swappable:start', () => console.log('swappable:start'));
+swappable.on('swappable:swapped', () => console.log('swappable:swapped'));
+swappable.on('swappable:stop', () => console.log('swappable:stop'));
+*/
+
+
+
+const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wrapper'), {
+        draggable: '.album-box'
+    })
+    .on('swappable:start', () => console.log('swappable:start'))
+    .on('swappable:swapped', () => console.log('swappable:swapped'))
+    .on('swappable:stop', () => console.log('swappable:stop'));
+
+
 
 /*
 $('.album-type .album-box').click(function (event) {
