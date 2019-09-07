@@ -127,7 +127,16 @@ var displayQuery = function () {
 
         for (var i = 0; i < artistQuery.album.length; i++) {
 
-            var albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "' data-artist='" + artistQuery.album[i].artist.name + "' data-album='" + artistQuery.album[i].name + "'></div>";
+            var albumContent;
+
+            if (artistQuery.album[i].artist.name == undefined) {
+                //Query through direct artist tag
+                var albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "' data-artist='" + artistQuery.album[i].artist + "' data-album='" + artistQuery.album[i].name + "'></div>";
+            } else {
+                // Query artist name regularly
+                var albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "' data-artist='" + artistQuery.album[i].artist.name + "' data-album='" + artistQuery.album[i].name + "'></div>";
+
+            }
 
             // Only append the album image to the album selector if there exists an URL for it
             if (artistQuery.album[i].image[2]['#text'].length !== 0) {

@@ -37,10 +37,12 @@ $(document).on("click", ".album-type img", function () {
     console.log("bro");
 
     var album = $(this).attr('src'); // Gets image source of selected thing
+    var albuminfo = $(this).data('artist') + ' ' + $(this).data('album');
 
+    console.log(albuminfo);
     console.log(album);
 
-    $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')');
+    $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').text(albuminfo);
 
 });
 
