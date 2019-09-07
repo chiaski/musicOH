@@ -80,7 +80,17 @@ function saveImage() {
     domtoimage.toBlob(document.getElementById('collage'))
         .then(function (blob) {
             window.saveAs(blob, 'my-node.png');
+
         });
+
+
+    domtoimage.toPng(document.getElementById('collage')).then(function (dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        $("#image-test").append(img);
+    }).catch(function (error) {
+        console.error('oops, something went wrong!', error);
+    });
 
     /*
     domtoimage
