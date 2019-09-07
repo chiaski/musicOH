@@ -11,12 +11,39 @@
 
 .album-box {
     display: inline-block;
-    margin: .5vw;
+    margin: 1vw;
     background-image: url();
     border: 1px solid #fff;
     z-index: 999;
-
     background-size: cover;
+    position: relative;
+}
+
+/*
+.album-box:hover + .album-box p {
+    display: block;
+}*/
+
+.album-box p {
+    pointer-events: none;
+    position: absolute;
+    top: 10vw;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    color: transparent;
+}
+
+
+.album-box:hover p {
+    color: black !important;
+}
+
+.album-box:hover {
+    opacity: 0.9;
 }
 
 

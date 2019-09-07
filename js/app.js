@@ -42,7 +42,7 @@ $(document).on("click", ".album-type img", function () {
     console.log(albuminfo);
     console.log(album);
 
-    $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').text(albuminfo);
+    $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').html("<p>" + albuminfo + "</p>");
 
 });
 
