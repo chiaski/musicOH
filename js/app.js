@@ -72,6 +72,68 @@ const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wr
     .on('swappable:stop', () => console.log('swappable:stop'));
 
 
+/* Save */
+// var saveimage = $('.saveimage');
+
+function saveImage() {
+
+    domtoimage.toBlob(document.getElementById('collage'))
+        .then(function (blob) {
+            window.saveAs(blob, 'my-node.png');
+        });
+
+    /*
+    domtoimage
+        .toBlob(document.getElementById("collage"))
+        .then(function (blob) {
+            saveBlobAsFile(blob, "XX.png");
+        });
+    // this function is to convert blob to base64 img
+    function saveBlobAsFile(blob, fileName) {
+        var reader = new FileReader();
+        reader.onloadend = function () {
+            var base64 = reader.result;
+            var img = document.createElement("img");
+            img.classList.add("me-img");
+            img.setAttribute("src", base64);
+            // insert the img to dom
+            document.getElementById("image-test").appendChild(img);
+        };
+        reader.readAsDataURL(blob);
+    }*/
+
+    /*
+    var target = $('#collage-wrapper');
+
+    html2canvas(target.get(0)).then(function (canvas) {
+        console.log(canvas);
+    });*/
+
+}
+/*
+function PrintDiv() {
+    var saveimage = $('.saveimage');
+    html2canvas((document.body), {
+        onrendered: function (canvas) {
+            var myImage = canvas.toDataURL();
+            downloadURI(myImage, "MaSimulation.png");
+        }
+    });
+}
+
+function downloadURI(uri, name) {
+    var link = document.createElement("a");
+
+    link.download = name;
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    //after creating link you should delete dynamic link
+    //clearDynamicLink(link); 
+}*/
+
+
+
 
 /*
 $('.album-type .album-box').click(function (event) {

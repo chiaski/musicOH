@@ -1,6 +1,8 @@
 .main-container {
-    background: lavender;
-    max-height: 100%;
+    background: black;
+    height: 100%;
+    width: 100%;
+    box-sizing: 1em;
 }
 
 
@@ -115,6 +117,8 @@
 
 .search-area {
     width: 100%;
+    height: 80px;
+    display: inline-block;
     box-sizing: border-box;
     padding: 1em;
     align-content: center;
@@ -126,6 +130,7 @@
     display: inline-block;
     border: 1px solid black;
     padding: .5em;
+
 }
 
 .search-area button {
