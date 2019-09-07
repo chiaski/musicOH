@@ -4,19 +4,25 @@
 }
 
 
-.collage-wrapper > .album-box {
 
-    flex: 1 0 calc(33.333% - 20px);
+/* Draggable duplicates divs with this fucking calculation problem */
+
+
+.collage-wrapper .album-box {
+    width: 30%;
 }
 
 .album-box {
     display: inline-block;
-    margin: 1vw;
+    box-sizing: border-box;
+    margin: .3em;
     background-image: url();
     border: 1px solid #fff;
     z-index: 999;
     background-size: cover;
     position: relative;
+    min-height: 100px;
+    min-width: 100px;
 }
 
 /*
@@ -27,7 +33,7 @@
 .album-box p {
     pointer-events: none;
     position: absolute;
-    top: 10vw;
+    top: 30%;
     font-size: 12px;
     line-height: 12px;
     text-align: center;
@@ -63,16 +69,21 @@
 
 .album-list {
     z-index: 9999;
-    display: inline-block;
+    bottom: 0;
     width: 100%;
     height: 200px;
     padding: 1em;
+    left: 0;
+    box-sizing: border-box;
     overflow-x: scroll;
     overflow-y: hidden;
     display: flex;
     align-items: baseline;
-    position: fixed;
     background: black;
+}
+
+.album-list > .album-box {
+    border: none;
 }
 
 
@@ -81,13 +92,13 @@
 .collage-area {
     background: cyan;
     display: inline-block;
-    height: 70%;
     width: 100%;
 }
 
 .collage-wrapper {
     box-sizing: border-box;
-    max-width: 600px;
+    max-width: 620px;
+
     padding: 1em;
     margin: auto;
     display: flex;
@@ -98,9 +109,21 @@
 
 /* search area */
 
+.main {
+    width: 100%;
+}
+
 .search-area {
+    width: 100%;
+    box-sizing: border-box;
     padding: 1em;
     align-content: center;
     justify-content: center;
     display: flex;
+}
+
+.search-area input[type=search] {
+    border: 1px solid black;
+    padding: .5em;
+    width: 80%;
 }

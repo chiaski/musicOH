@@ -60,7 +60,12 @@ swappable.on('swappable:stop', () => console.log('swappable:stop'));
 
 
 const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wrapper'), {
-        draggable: '.album-box'
+        draggable: '.album-box',
+
+        mirror: {
+            constrainDimensions: true,
+        },
+        plugins: [Plugins.ResizeMirror]
     })
     .on('swappable:start', () => console.log('swappable:start'))
     .on('swappable:swapped', () => console.log('swappable:swapped'))
