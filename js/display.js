@@ -30,7 +30,7 @@ var displayQuery = function () {
 
 
     function getArtist(music) {
-        fetch('http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + music + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
+        fetch('https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + music + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
             .then(function (response) {
                 // return response.json();
                 return response.json();
@@ -51,7 +51,7 @@ var displayQuery = function () {
     }
 
     function getAlbum(music) {
-        fetch('http://ws.audioscrobbler.com/2.0/?method=album.search&album=' + music + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
+        fetch('https://ws.audioscrobbler.com/2.0/?method=album.search&album=' + music + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
             .then(function (response) {
                 // return response.json();
                 return response.json();

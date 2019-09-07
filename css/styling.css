@@ -1,8 +1,10 @@
 .album-box {
     display: inline-block;
-    margin: .1em;
-    width: 130px;
-    height: 130px;
+    margin: .5em;
+    min-height: 100px;
+    min-width: 100px;
+    height: 13vw;
+    width: 13vw;
     background-image: url();
     border: 1px solid #000;
     z-index: 999;
@@ -34,11 +36,14 @@
 
 .collage-area {
     background: cyan;
-    min-height: 300px;
+    position: relative;
+    min-height: 600px;
 }
 
 .collage-wrapper {
-    width: 500px;
+    box-sizing: border-box;
+    max-width: 600px;
+    padding: 1em;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
