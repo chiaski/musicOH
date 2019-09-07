@@ -35,13 +35,31 @@
         <h1>Hello!</h1>
         <div class="main">
 
+            <div class="search-area" id="space-search">
+                <fieldset>
+                    <form onSubmit="return false">
+                        <input type="search" name="Album" class="input-finder" id="input-finders" placeholder="Enter an Album">
+                        <input type="button" id="generateAlbums" class="ghost-button" value="Generate" onclick="displayQuery.render();">
+                    </form>
+                </fieldset>
+            </div>
 
-            <fieldset>
-                <form onSubmit="return false">
-                    <input type="search" name="Album" class="input-finder" id="input-finders" placeholder="Enter an Album">
-                    <input type="button" id="generateAlbums" class="ghost-button" value="Generate" onclick="displayQuery.render();">
-                </form>
-            </fieldset>
+            <div class="collage-area">
+                <div class="collage-wrapper">
+
+                    <div class="album-box alb-empty"></div>
+                    <div class="album-box alb-empty"></div>
+                    <div class="album-box alb-empty"></div>
+
+                    <div class="album-box alb-empty"></div>
+                    <div class="album-box alb-empty"></div>
+                    <div class="album-box alb-empty"></div>
+
+                    <div class="album-box alb-empty"></div>
+                    <div class="album-box alb-empty"></div>
+                    <div class="album-box alb-empty"></div>
+                </div>
+            </div>
 
             <div class="album-list">
             </div>
@@ -58,12 +76,12 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-
     </script>
 
     <script src="main.js"></script>
     <script src="js/main.js"></script>
     <script src="js/display.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 

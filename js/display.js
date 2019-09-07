@@ -127,7 +127,7 @@ var displayQuery = function () {
 
         for (var i = 0; i < artistQuery.album.length; i++) {
 
-            var albumContent = "<div class='album-type'><img src='" + artistQuery.album[i].image[2]['#text'] + "'></div>";
+            var albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "'></div>";
 
             // Only append the album image to the album selector if there exists an URL for it
             if (artistQuery.album[i].image[2]['#text'].length !== 0) {

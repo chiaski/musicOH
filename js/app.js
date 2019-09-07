@@ -4,6 +4,7 @@ to be fixed later */
 console.log("app.js is loaded");
 
 
+/*
 var key = '602cdfee63f450d681a00c86afca33c5';
 
 fetch('http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=' + key + '&artist=The+Hotelier&album=Home,+Like+Noplace+Is+There&format=json')
@@ -12,7 +13,44 @@ fetch('http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=' + key + 
     })
     .then(function (myJson) {
         console.log(JSON.stringify(myJson));
-    });
+    });*/
+
+
+var main = function () {
+
+
+}();
+
+
+/* Listeners */
+
+
+//album type means it's loaded into the selection area
+
+
+$(".album-type").click(function () {
+    console.log("You clicked me!");
+});
+
+
+$(document).on("click", ".album-type img", function () {
+    console.log("bro");
+
+    var album = $(this).attr('src'); // Gets image source of selected thing
+
+    console.log(album);
+
+    $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')');
+
+});
+
+
+
+/*
+$('.album-type .album-box').click(function (event) {
+    alert('Text');
+});*/
+
 
 /*
 fetch('https://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=thaXuVdDamQySCOQEPHV&artist=cher&track=believe&format=json')

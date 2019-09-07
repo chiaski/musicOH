@@ -1,10 +1,12 @@
-.album-type {
+.album-box {
     display: inline-block;
     margin: .1em;
     width: 130px;
     height: 130px;
     background-image: url();
     border: 1px solid #000;
+    z-index: 999;
+    background-size: cover;
 }
 
 .album-type img {
@@ -24,4 +26,31 @@
     align-items: baseline;
     position: fixed;
     bottom: 0;
+    background: black;
+}
+
+
+/* collage part */
+
+.collage-area {
+    background: cyan;
+    min-height: 300px;
+}
+
+.collage-wrapper {
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+/* search area */
+
+.search-area {
+    padding: 1em;
+    align-content: center;
+    justify-content: center;
+    display: flex;
 }
