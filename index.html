@@ -35,18 +35,32 @@
 
         <div class="main">
 
-            <div class="search-area" id="space-search">
-                <fieldset>
-                    <form onSubmit="return false">
-                        <input type="search" name="Album" class="input-finder" id="input-finders" placeholder="Enter an Album">
+            <div class="header-container">
 
-                        <button id="generateAlbums" class="ghost-button" value="Generate" onclick="displayQuery.render();">Generate</button>
-                    </form>
-                </fieldset>
-                <br>
-                <button class="saveimage" onclick="saveImage();">Save</button>
-            </div>
+                <div class="search-area" id="space-search">
+                    <fieldset>
+                        <form onSubmit="return false">
+                            <input type="search" name="Album" class="input-finder" id="input-finders" placeholder="Enter an Album">
+
+                            <button id="generateAlbums" class="ghost-button" value="Generate" onclick="displayQuery.render();">Generate</button>
+                        </form>
+                    </fieldset>
+                    <br>
+                    <button class="saveimage" onclick="saveImage();">Save</button>
+                </div> <!-- search -->
+
+                <div class="options-area">
+
+
+                </div> <!-- options: grid, color -->
+
+            </div> <!-- Header Container; with options, search, info, etc. -->
             <div class="collage-area" id="collage">
+
+                <div class="collage-title">
+
+                </div> <!-- collage title -->
+
                 <div class="collage-wrapper">
 
                     <div class="album-box alb-empty"></div>
@@ -75,6 +89,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+
     </script>
 
 

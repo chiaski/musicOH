@@ -3,6 +3,8 @@ MusicOH is an alternative to the popular music/film chart generator called "Tops
 
 Trying to make a better topsters  + spotify thing / OH!
 
+### deets 
+
 musicOH!/0.1 +http://chiask.com/music
 
 * Last.fm for image API
@@ -13,3 +15,17 @@ musicOH!/0.1 +http://chiask.com/music
 
 
 * How the fuck do I not have to send the rgufckfbgfjg 
+
+
+## Features
+
+
+
+### To-do
+* Saving current chart on reload (cookies?)
+
+
+## Options
+
+* (Default) 3x3 Grid
+
