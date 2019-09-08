@@ -139,6 +139,8 @@ var displayQuery = function () {
             }
 
             // Only append the album image to the album selector if there exists an URL for it
+
+            // Consider cookies to save selection on browser reload later on
             if (artistQuery.album[i].image[2]['#text'].length !== 0) {
                 $(".album-list").append(albumContent);
             } else {

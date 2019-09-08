@@ -1,3 +1,10 @@
+/*  Color 
+    to be used for modes later on, maybe? */
+/* Main Styling */
+body {
+  background: #f2b8ca;
+}
+
 .main-container {
   background: #f2b8ca;
   height: 100%;

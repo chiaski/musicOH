@@ -1,5 +1,18 @@
+/*  Color 
+    to be used for modes later on, maybe? */
+
+$bg: #f2b8ca;
+
+
+
+/* Main Styling */
+
+body {
+    background: $bg;
+}
+
 .main-container {
-    background: #f2b8ca;
+    background: $bg;
     height: 100%;
     width: 100%;
     box-sizing: 1em;
