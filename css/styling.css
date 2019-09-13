@@ -3,6 +3,9 @@
 /* Main Styling */
 body {
   background: #97c6c2;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .main-container {
@@ -136,14 +139,15 @@ body {
 .search-area input[type=search] {
   display: inline-block;
   border: 1px solid ransparent;
-  padding: 0.5em;
+  padding: 1em;
+  font-family: "Work Sans";
+  min-width: 200px;
 }
 
 .search-area button {
   background: #fff;
   border: 1px solid transparent;
   margin: 0.3em;
-  width: 80px;
 }
 
 .search-area .saveimage {
@@ -152,7 +156,6 @@ body {
   border: 1px solid transparent;
   margin: 0.3em;
   height: 29px;
-  width: 50px;
 }
 
 /*# sourceMappingURL=styling.css.map */

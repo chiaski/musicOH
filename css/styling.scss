@@ -11,6 +11,10 @@ html {}
 
 body {
     background: $bg;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .main-container {
@@ -169,7 +173,9 @@ body {
 .search-area input[type=search] {
     display: inline-block;
     border: 1px solid ransparent;
-    padding: .5em;
+    padding: 1em;
+    font-family: "Work Sans";
+    min-width: 200px;
 
 }
 
@@ -177,7 +183,6 @@ body {
     background: #fff;
     border: 1px solid transparent;
     margin: .3em;
-    width: 80px;
 }
 
 
@@ -187,5 +192,4 @@ body {
     border: 1px solid transparent;
     margin: .3em;
     height: 29px;
-    width: 50px;
 }
