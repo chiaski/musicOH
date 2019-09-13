@@ -18,10 +18,10 @@ fetch('http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=' + key + 
 
 var main = function () {
 
-    function hideAlbum(){
-        
+    function hideAlbum() {
+
     }
-    
+
 }();
 
 
@@ -45,9 +45,15 @@ $(document).on("click", ".album-type img", function () {
     console.log(albuminfo);
     console.log(album);
 
-    $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').html("<p>" + albuminfo + "</p>");
+    $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').html("<p>" + albuminfo + "</p>").addClass("alb-item");
 
 });
+
+
+$(document).on("dblclick", ".alb-item", function (e) {
+    console.log("you double clicked me!");
+});
+
 
 
 /*
