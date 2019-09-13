@@ -18,7 +18,10 @@ fetch('http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=' + key + 
 
 var main = function () {
 
-
+    function hideAlbum(){
+        
+    }
+    
 }();
 
 
@@ -108,21 +111,6 @@ function saveImage() {
 
 
 }
-
-/*
-function PrintDiv() {
-    var saveimage = $('.saveimage');
-    html2canvas((document.body), {
-        onrendered: function (canvas) {
-            var myImage = canvas.toDataURL();
-            downloadURI(myImage, "MaSimulation.png");
-        }
-    });
-}
-*/
-
-
-
 
 /*
 $('.album-type .album-box').click(function (event) {
