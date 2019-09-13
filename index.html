@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/styling.css">
 
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,900&display=swap" rel="stylesheet">
+
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 
@@ -39,18 +42,18 @@
 
         <div class="main">
 
-            <div class="header-container">
+            <div class="header-container" style="margin-top:-1em;">
 
                 <div class="search-area" id="space-search">
                     <fieldset>
                         <form onSubmit="return false">
-                            <input type="search" name="Album" class="input-finder" id="input-finders" placeholder="Enter an Album">
+                            <input type="search" name="Album" class="input-finder" id="input-finders" placeholder="Enter an Album"><br>
 
                             <button id="generateAlbums" class="ghost-button" value="Generate" onclick="displayQuery.render();">Generate</button>
+
+                            <button class="saveimage" onclick="saveImage();">Save</button>
                         </form>
                     </fieldset>
-                    <br>
-                    <button class="saveimage" onclick="saveImage();">Save</button>
                 </div> <!-- search -->
 
                 <div class="options-area">
