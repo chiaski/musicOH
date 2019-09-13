@@ -15,12 +15,10 @@ musicOH!/0.1 +http://chiask.com/music
 * Filesaver
 * Flexbox and Swappable
 * SASS
+* Hammer.js
 
 
-* How the fuck do I not have to send the rgufckfbgfjg 
-
-
-## Features
+### Features
 
 
 
@@ -28,7 +26,7 @@ musicOH!/0.1 +http://chiask.com/music
 * Saving current chart on reload (cookies?)
 
 
-## Options
+### Options
 
 * (Default) 3x3 Grid
 
