@@ -50,23 +50,17 @@ $(document).on("click", ".album-type img", function () {
 });
 
 
+// Double-click to remove
+
 $(document).on("dblclick", ".alb-item", function (e) {
-    console.log("you double clicked me!");
+    console.log("Double clicked me!");
+    $(this).css('background-image', '').html('').removeClass('alb-item').addClass('alb-empty');
 });
 
 
 
-/*
-const swappable = new Swappable(document.querySelectorAll('.album-box'), {
-    draggable: '.album-box'
-});
 
-swappable.on('swappable:start', () => console.log('swappable:start'));
-swappable.on('swappable:swapped', () => console.log('swappable:swapped'));
-swappable.on('swappable:stop', () => console.log('swappable:stop'));
-*/
-
-
+/* Swappable Code */
 
 const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wrapper'), {
         draggable: '.album-box',
@@ -93,17 +87,6 @@ function saveImage() {
 
         });
 
-
-    /* append to div */
-    /*
-    html2canvas(document.getElementById(collage), {
-        useCORS: true,
-        onrendered: (canvas) => {
-            download(canvas.toDataURL(), "map.png", "image/png"); // Call to global js plugin
-        }
-    });*/
-
-
     /* Append image to a div */
 
     domtoimage.toPng(document.getElementById('collage')).then(function (dataUrl) {
@@ -117,53 +100,3 @@ function saveImage() {
 
 
 }
-
-/*
-$('.album-type .album-box').click(function (event) {
-    alert('Text');
-});*/
-
-
-/*
-fetch('https://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=thaXuVdDamQySCOQEPHV&artist=cher&track=believe&format=json')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (myJson) {
-        console.log(JSON.stringify(myJson));
-    });
-
-
-$.ajax({
-    url: 'https://api.wit.ai/message?v=20140826&q=',
-    beforeSend: function (xhr) {
-        xhr.setRequestHeader("Authorization", "Bearer 6QXNMEMFHNY4FJ5ELNFMP5KRW52WFXN5")
-    },
-    success: function (data) {
-        alert(data);
-        //process the JSON data etc
-    }
-})
-
-
-$.getJSON('your-api-url/validate.php?' + $(this).serialize + 'callback=?', function (data) {
-    if (data) console.log(data);
-});*/
-
-
-
-/*
-function getimage(theUrl, callback) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function () {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            callback(xmlHttp.responseText);
-    }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-    xmlHttp.send(null);
-}
-
-function show(response) {
-    console.log(response);
-}
-*/
