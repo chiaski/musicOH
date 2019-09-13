@@ -2,11 +2,11 @@
     to be used for modes later on, maybe? */
 /* Main Styling */
 body {
-  background: #f2b8ca;
+  background: #97c6c2;
 }
 
 .main-container {
-  background: #f2b8ca;
+  background: #97c6c2;
   height: 100%;
   width: 100%;
   box-sizing: 1em;
@@ -29,6 +29,8 @@ body {
   position: relative;
   min-height: 100px;
   min-width: 100px;
+  touch-action: manipulation;
+  cursor: pointer;
 }
 .album-box p {
   pointer-events: none;
@@ -41,6 +43,16 @@ body {
   box-sizing: border-box;
   padding: 1em;
   color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.alb-item {
+  touch-action: manipulation;
 }
 
 /*
@@ -87,12 +99,13 @@ body {
 
 /* collage part */
 .collage-area {
-  background: #f2b8ca;
+  background: #97c6c2;
   display: inline-block;
   width: 100%;
 }
 
 .collage-wrapper {
+  cursor: pointer;
   box-sizing: border-box;
   max-width: 620px;
   padding: 1em;

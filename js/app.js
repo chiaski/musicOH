@@ -4,6 +4,9 @@ to be fixed later */
 console.log("app.js is loaded");
 
 
+
+
+
 /*
 var key = '602cdfee63f450d681a00c86afca33c5';
 
@@ -15,7 +18,6 @@ fetch('http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=' + key + 
         console.log(JSON.stringify(myJson));
     });*/
 
-
 var main = function () {
 
     function hideAlbum() {
@@ -25,7 +27,10 @@ var main = function () {
 }();
 
 
+
 /* Listeners */
+
+
 
 
 //album type means it's loaded into the selection area
@@ -50,20 +55,34 @@ $(document).on("click", ".album-type img", function () {
 });
 
 
-// Double-click to remove
 
-$(document).on("dblclick", ".alb-item", function (e) {
-    console.log("Double clicked me!");
+// Click to remove
+
+$(document).on("click", ".alb-item", function () {
+    if (window.outerWidth < 500) {
+        $(this).css('background-image', '').html('').removeClass('alb-item').addClass('alb-empty');
+    }
     $(this).css('background-image', '').html('').removeClass('alb-item').addClass('alb-empty');
 });
+
+/*
+
+$(document).on("click", ".collage-wrapper", function () {
+    if (window.outerWidth < 500) {
+        $('.collage-wrapper').css('background-color', 'cyan');
+        alert("Double clicked me!");
+        $(this).css('background-image', '').html('').removeClass('alb-item').addClass('alb-empty');
+    }
+});*/
 
 
 
 
 /* Swappable Code */
 
+
 const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wrapper'), {
-        draggable: '.album-box',
+        draggable: '.album-box, .album-box .album-item',
 
         mirror: {
             constrainDimensions: true,
@@ -73,6 +92,8 @@ const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wr
     .on('swappable:start', () => console.log('swappable:start'))
     .on('swappable:swapped', () => console.log('swappable:swapped'))
     .on('swappable:stop', () => console.log('swappable:stop'));
+
+
 
 
 /* Save */

@@ -1,11 +1,13 @@
 /*  Color 
     to be used for modes later on, maybe? */
 
-$bg: #f2b8ca;
-
+$bg: #97c6c2;
 
 
 /* Main Styling */
+
+*,
+html {}
 
 body {
     background: $bg;
@@ -39,6 +41,8 @@ body {
     position: relative;
     min-height: 100px;
     min-width: 100px;
+    touch-action: manipulation;
+    cursor: pointer;
 
 
     p {
@@ -52,8 +56,20 @@ body {
         box-sizing: border-box;
         padding: 1em;
         color: transparent;
+
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
+}
+
+.alb-item {
+    touch-action: manipulation;
 }
 
 /*
@@ -108,12 +124,17 @@ body {
 /* collage part */
 
 .collage-area {
-    background: #f2b8ca;
+
+    background: $bg;
     display: inline-block;
     width: 100%;
+
+
 }
 
 .collage-wrapper {
+
+    cursor: pointer;
     box-sizing: border-box;
     max-width: 620px;
 
@@ -123,6 +144,8 @@ body {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+
+
 }
 
 /* search area */
