@@ -132,6 +132,10 @@ body {
 
 .collage-area {
 
+
+    animation: colorchange 30s infinite;
+    -webkit-animation: colorchange 30s infinite;
+
     display: inline-block;
     width: 100%;
 
