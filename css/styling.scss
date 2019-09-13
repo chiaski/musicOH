@@ -10,7 +10,11 @@ $bg: #97c6c2;
 html {}
 
 body {
-    background: $bg;
+    animation: colorchange 30s infinite;
+    /* animation-name followed by duration in seconds*/
+    /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 30s infinite;
+    /* Chrome and Safari */
 
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -18,7 +22,6 @@ body {
 }
 
 .main-container {
-    background: $bg;
     height: 100%;
     width: 100%;
     box-sizing: 1em;
@@ -129,7 +132,6 @@ body {
 
 .collage-area {
 
-    background: $bg;
     display: inline-block;
     width: 100%;
 
@@ -168,6 +170,7 @@ body {
     justify-content: center;
     display: flex;
     min-height: 120px;
+    border: none;
 }
 
 .search-area input[type=search] {
@@ -200,4 +203,101 @@ body {
     font-family: "Work Sans";
     font-size: 13px;
     min-width: 50px;
+}
+
+
+
+@keyframes colorchange {
+    0% {
+        background: #f4dfe2;
+    }
+
+    10% {
+        background: #f5dccc;
+    }
+
+    20% {
+        background: #f5f3cc;
+    }
+
+    30% {
+        background: #c3e7c4;
+    }
+
+    40% {
+        background: #c3e7e7;
+    }
+
+    50% {
+        background: #c3d6e7;
+    }
+
+    60% {
+        background: #bdbdee;
+    }
+
+    70% {
+        background: #e0d6ed;
+    }
+
+    80% {
+        background: #ecd6f2;
+    }
+
+    90% {
+        background: #f4cee7;
+    }
+
+    100% {
+        background: #f4dfe2;
+    }
+}
+
+@-webkit-keyframes colorchange
+
+/* Safari and Chrome - necessary duplicate */
+    {
+    0% {
+        background: #f4dfe2;
+    }
+
+    10% {
+        background: #f5dccc;
+    }
+
+    20% {
+        background: #f5f3cc;
+    }
+
+    30% {
+        background: #c3e7c4;
+    }
+
+    40% {
+        background: #c3e7e7;
+    }
+
+    50% {
+        background: #c3d6e7;
+    }
+
+    60% {
+        background: #bdbdee;
+    }
+
+    70% {
+        background: #e0d6ed;
+    }
+
+    80% {
+        background: #ecd6f2;
+    }
+
+    90% {
+        background: #f4cee7;
+    }
+
+    100% {
+        background: #f4dfe2;
+    }
 }
