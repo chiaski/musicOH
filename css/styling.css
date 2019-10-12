@@ -2,10 +2,9 @@
     to be used for modes later on, maybe? */
 /* Main Styling */
 body {
-  animation: colorchange 30s infinite;
+  background: #fbfdfd;
   /* animation-name followed by duration in seconds*/
   /* you could also use milliseconds (ms) or something like 2.5s */
-  -webkit-animation: colorchange 30s infinite;
   /* Chrome and Safari */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -105,8 +104,9 @@ body {
 
 /* collage part */
 .collage-area {
-  animation: colorchange 30s infinite;
-  -webkit-animation: colorchange 30s infinite;
+  background: #fbfdfd;
+  /*animation: colorchange 30s infinite;
+  -webkit-animation: colorchange 30s infinite;*/
   display: inline-block;
   width: 100%;
 }
@@ -128,6 +128,10 @@ body {
   width: 100%;
 }
 
+.header-container .header-title {
+  font-family: "Robot Mono", monospace;
+}
+
 .search-area {
   width: 100%;
   height: 100px;
@@ -143,10 +147,12 @@ body {
 
 .search-area input[type=search] {
   display: inline-block;
-  border: 1px solid transparent;
-  padding: 0.8em;
+  border: transparent;
+  border-bottom: 1px solid #272222;
+  padding: 0.5em;
   font-family: "Work Sans";
   min-width: 250px;
+  font-weight: 100 !important;
   text-align: center;
   margin: 0.4em;
 }
@@ -156,17 +162,15 @@ body {
   border: 1px solid transparent;
   margin: 0.3em;
   padding: 0.3em;
-  font-family: "Work Sans";
+  font-family: "Robot Mono", monospace;
   font-size: 13px;
 }
 
 .search-area .saveimage {
-  background: #000;
-  color: #fff;
-  border: 1px solid transparent;
+  border-left: 1px solid #000;
   margin: 0.3em;
-  padding: 0.3em;
-  font-family: "Work Sans";
+  padding: 0.3em 0.3em 0.3em 1em;
+  font-family: "Robot Mono", monospace;
   font-size: 13px;
   min-width: 50px;
 }

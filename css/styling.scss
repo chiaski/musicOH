@@ -1,7 +1,7 @@
 /*  Color 
     to be used for modes later on, maybe? */
 
-$bg: #97c6c2;
+$bg: #fbfdfd;
 
 
 /* Main Styling */
@@ -10,10 +10,11 @@ $bg: #97c6c2;
 html {}
 
 body {
-    animation: colorchange 30s infinite;
+    background: $bg;
+    //animation: colorchange 30s infinite;
     /* animation-name followed by duration in seconds*/
     /* you could also use milliseconds (ms) or something like 2.5s */
-    -webkit-animation: colorchange 30s infinite;
+    //-webkit-animation: colorchange 30s infinite;
     /* Chrome and Safari */
 
     text-rendering: optimizeLegibility;
@@ -132,9 +133,10 @@ body {
 
 .collage-area {
 
-
-    animation: colorchange 30s infinite;
-    -webkit-animation: colorchange 30s infinite;
+    
+    background: $bg;
+    /*animation: colorchange 30s infinite;
+    -webkit-animation: colorchange 30s infinite;*/
 
     display: inline-block;
     width: 100%;
@@ -160,8 +162,17 @@ body {
 
 /* search area */
 
+
+
 .main {
     width: 100%;
+}
+
+.header-container{
+    
+    .header-title{
+    font-family: "Robot Mono", monospace;
+    }
 }
 
 .search-area {
@@ -179,32 +190,32 @@ body {
 
 .search-area input[type=search] {
     display: inline-block;
-    border: 1px solid transparent;
-    padding: .8em;
+    border:transparent;
+    border-bottom:1px solid #272222;
+    padding: .5em;
     font-family: "Work Sans";
     min-width: 250px;
+    font-weight:100 !important;
     text-align: center;
     margin: .4em;
 
 }
 
 .search-area button {
-    background: #fff;
+    background:#fff;
     border: 1px solid transparent;
     margin: .3em;
     padding: .3em;
-    font-family: "Work Sans";
+    font-family: "Robot Mono", monospace;
     font-size: 13px;
 }
 
 
 .search-area .saveimage {
-    background: #000;
-    color: #fff;
-    border: 1px solid transparent;
+    border-left:1px solid #000;
     margin: .3em;
-    padding: .3em;
-    font-family: "Work Sans";
+    padding: .3em .3em .3em 1em;
+    font-family: "Robot Mono", monospace;
     font-size: 13px;
     min-width: 50px;
 }
