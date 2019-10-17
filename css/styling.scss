@@ -35,6 +35,7 @@ body {
 
 .collage-wrapper .album-box {
     width: 30%;
+    
 }
 
 .album-box {
@@ -45,9 +46,8 @@ body {
     border: 1px solid #1f1c1c;
     z-index: 999;
     background-size: cover;
-    position: relative;
-    min-height: 100px;
-    min-width: 100px;
+    width: calc(96% / 3.3);
+    height: calc(96% / 3.3);
     touch-action: manipulation;
     cursor: pointer;
 
@@ -109,6 +109,7 @@ body {
 /* where albums are displayed */
 
 .album-list {
+    display:inline-block;
     z-index: 9999;
     bottom: 0;
     width: 100%;
@@ -131,14 +132,17 @@ body {
 /* collage part */
 
 .collage-area {
+    background:red;
+    border-bottom:10px solid blue;
 
     
-    background: $bg;
+    //background: $bg;
     /*animation: colorchange 30s infinite;
     -webkit-animation: colorchange 30s infinite;*/
 
     display: inline-block;
     width: 100%;
+    max-height:500px;
 
 
 }
@@ -148,8 +152,9 @@ body {
     cursor: pointer;
     background:yellow;
     box-sizing: border-box;
-    width:65%;
-    max-width:650px;
+    max-width:600px;
+    height:auto;
+    border-bottom:10px red solid;
 
     padding: 5%;
     margin: auto;
