@@ -3,18 +3,6 @@ to be fixed later */
 
 console.log("app.js is loaded");
 
-
-/*
-var key = '602cdfee63f450d681a00c86afca33c5';
-
-fetch('http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=' + key + '&artist=The+Hotelier&album=Home,+Like+Noplace+Is+There&format=json')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (myJson) {
-        console.log(JSON.stringify(myJson));
-    });*/
-
 var main = function () {
 
     function hideAlbum() {
@@ -49,8 +37,6 @@ $(document).on("click", ".album-type img", function () {
 
 });
 
-
-
 // Click to remove
 
 $(document).on("click", ".alb-item", function () {
@@ -60,22 +46,10 @@ $(document).on("click", ".alb-item", function () {
     $(this).css('background-image', '').html('').removeClass('alb-item').addClass('alb-empty');
 });
 
-/*
-
-$(document).on("click", ".collage-wrapper", function () {
-    if (window.outerWidth < 500) {
-        $('.collage-wrapper').css('background-color', 'cyan');
-        alert("Double clicked me!");
-        $(this).css('background-image', '').html('').removeClass('alb-item').addClass('alb-empty');
-    }
-});*/
-
 
 
 
 /* Swappable Code */
-
-
 const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wrapper'), {
         draggable: '.album-box, .album-box .album-item',
 
@@ -92,7 +66,6 @@ const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wr
 
 
 /* Save */
-// var saveimage = $('.saveimage');
 
 function saveImage() {
 

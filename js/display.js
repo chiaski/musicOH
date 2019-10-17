@@ -5,7 +5,6 @@ function convert(string) {
 
 
 
-
 // Handles display calls
 var displayQuery = function () {
     console.log("This is display.");
@@ -27,7 +26,6 @@ var displayQuery = function () {
     function imgay() {
         console.log("Yes you are gay!");
     };
-
 
 
     function getArtist(music) {
@@ -99,11 +97,8 @@ var displayQuery = function () {
                 $(".album-list").append(albumContent);
             } else {
                 badsearch++;
-                // console.log("bad search:" + badsearch);
             }
 
-
-            //console.log(artistQuery.album.length);
 
             // If lots of bad searches, retry with albums
             if (badsearch >= artistQuery.album.length) {
