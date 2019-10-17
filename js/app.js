@@ -4,7 +4,6 @@ to be fixed later */
 console.log("app.js is loaded");
 
 
-
 /*
 var key = '602cdfee63f450d681a00c86afca33c5';
 
