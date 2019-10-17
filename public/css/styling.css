@@ -127,33 +127,33 @@ body {
   display: flex;
   min-height: 120px;
   border: none; }
-
-.search-area input[type=search] {
-  display: inline-block;
-  border: transparent;
-  border-bottom: 1px solid #272222;
-  padding: .5em;
-  font-family: "Work Sans";
-  min-width: 250px;
-  font-weight: 100 !important;
-  text-align: center;
-  margin: .4em; }
-
-.search-area button {
-  background: #fff;
-  border: 1px solid transparent;
-  margin: .3em;
-  padding: .3em;
-  font-family: "Robot Mono", monospace;
-  font-size: 13px; }
-
-.search-area .saveimage {
-  border-left: 1px solid #000;
-  margin: .3em;
-  padding: .3em .3em .3em 1em;
-  font-family: "Robot Mono", monospace;
-  font-size: 13px;
-  min-width: 50px; }
+  .search-area button {
+    background: #fff;
+    border: 1px solid transparent;
+    margin: .3em;
+    padding: .5em;
+    font-family: "Robot Mono", monospace;
+    font-size: 13px; }
+  .search-area button:hover {
+    background: #000;
+    coloR: #fff; }
+  .search-area input[type=search] {
+    display: inline-block;
+    border: transparent;
+    border-bottom: 1px solid #272222;
+    padding: .5em;
+    font-family: "Work Sans";
+    min-width: 320px;
+    font-weight: 100 !important;
+    text-align: center;
+    margin: .4em; }
+  .search-area .saveimage {
+    margin: .3em;
+    padding: .3em .3em .3em 1em;
+    font-family: "Robot Mono", monospace;
+    font-size: 13px;
+    text-align: center;
+    min-width: 90px; }
 
 @keyframes colorchange {
   0% {
