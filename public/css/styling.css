@@ -94,23 +94,20 @@ body {
 .collage-area {
   background: red;
   border-bottom: 10px solid blue;
+  display: flex;
   /*animation: colorchange 30s infinite;
     -webkit-animation: colorchange 30s infinite;*/
-  display: inline-block;
-  width: 100%;
-  max-height: 500px; }
+  position: relative;
+  max-height: 80%; }
 
 .collage-wrapper {
+  position: relative;
   cursor: pointer;
   background: yellow;
   box-sizing: border-box;
-  max-width: 600px;
-  height: auto;
-  border-bottom: 10px red solid;
-  padding: 5%;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
+  width: 60%;
+  max-width: 630px !important;
   align-content: space-between;
   justify-content: space-between;
   /* box sizing */ }
