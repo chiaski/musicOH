@@ -5,6 +5,7 @@ function convert(string) {
 
 
 
+
 // Handles display calls
 var displayQuery = function () {
     console.log("This is display.");
@@ -69,53 +70,6 @@ var displayQuery = function () {
     function fetchMusic(music) {
 
         displayQuery.getArtist(music);
-
-        /*
-        // Get first key of the query
-        switch (Object.keys(displayQuery.fetchMusic().getArtist(music))[0]) {
-            case "topalbums":
-                artistQuery = displayQuery.fetchMusic().getArtist(music);
-                displayQuery.displayAlbums(artistQuery);
-
-                break;
-
-            case "error":
-                console.log("Query doesn't exist!");
-                break;
-
-            default:
-                var newquery = displayQuery.fetchMusic(music).getAlbum(music);
-
-                displayQuery.displayAlbums(newquery);
-
-        } */
-
-        /*
-        if ("error" in displayQuery.fetchMusic(music).getQuery(music)) {
-            console.log("Query doesn't exist!")
-        } else
-
-            fetch('http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + music + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (myJson) {
-                //If artist query doesn't work
-                if ("error" in myJson) {
-                    console.log("Doesn't exist!");
-                } else if ("results" in myJson) {
-
-                    console.log("NOTICE: Searching albums");
-                    var album = displayQuery.fetchMusic().getQuery(1, music);
-                    displayQuery.displayAlbums(album);
-                } else {
-                    console.log("NOTICE: Searching artists");
-                    // Display them on the entry area
-                    displayQuery.displayAlbums(myJson.topalbums);
-                    artistQuery = JSON.stringify(myJson.topalbums.album);
-                }
-                //console.log("Artist Query:" + artistQuery);
-            });*/
     }
 
 

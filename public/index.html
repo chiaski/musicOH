@@ -42,7 +42,10 @@
 
         <div class="main">
 
-            <div class="header-container" style="margin-top:-1em;">
+            <div class="header-container" style="margin-top:-2em;">
+                
+                 
+                
                 
                 <div class="header-bar">
                     <div class="header-title">MusicOH!</div>
@@ -53,14 +56,28 @@
                         <form onSubmit="return false">
                             <input type="search" name="Album" class="input-finder" id="input-finders" placeholder="Enter an Album"><br>
 
+                            
+                            <center>
                             <button id="generateAlbums" class="ghost-button" value="Generate" onclick="displayQuery.render();">Generate</button>
+                            
+                            <div class="divider-vert"> </div>
 
                             <button class="saveimage" onclick="saveImage();">Save</button>
+                            
+                            <div class="divider-vert"> </div>
+
+                            <button class="saveimage" onclick="saveImage();">See Sizes</button>
+                            </center>
+                            
                         </form>
                     </fieldset>
                 </div> <!-- search -->
 
                 <div class="options-area">
+                    
+                    <button>3x3</button>
+                    <button>5x5</button>
+                    <button>Standard</button>
 
 
                 </div> <!-- options: grid, color -->
@@ -73,6 +90,14 @@
                 </div> <!-- collage title -->
 
                 <div class="collage-wrapper">
+
+                    <div class="album-box alb-empty alb-size-three"></div>
+                    <div class="album-box alb-empty alb-size-three"></div>
+                    <div class="album-box alb-empty alb-size-three"></div>
+                    <div class="album-box alb-empty alb-size-three"></div>
+                    <div class="album-box alb-empty alb-size-three"></div>
+                    <div class="album-box alb-empty alb-size-three"></div>
+                    <div class="album-box alb-empty alb-size-one"></div>
 
                     <div class="album-box alb-empty"></div>
                     <div class="album-box alb-empty"></div>

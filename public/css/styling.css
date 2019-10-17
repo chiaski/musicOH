@@ -13,7 +13,7 @@ body {
 .main-container {
   height: 100%;
   width: 100%;
-  box-sizing: 1em;
+  box-sizing: border-box;
   overflow-x: hidden; }
 
 /* Draggable duplicates divs with this fucking calculation problem */
@@ -25,7 +25,7 @@ body {
   box-sizing: border-box;
   margin: .3em;
   background-image: url();
-  border: 1px solid #fff;
+  border: 1px solid #1f1c1c;
   z-index: 999;
   background-size: cover;
   position: relative;
@@ -101,13 +101,18 @@ body {
 .collage-wrapper {
   cursor: pointer;
   box-sizing: border-box;
-  max-width: 620px;
+  max-width: 750px;
   padding: 1em;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  /* box sizing */ }
+  .collage-wrapper .alb-size-three {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    background: red; }
 
 /* search area */
 .main {
@@ -118,25 +123,31 @@ body {
 
 .search-area {
   width: 100%;
-  height: 100px;
   display: inline-block;
   box-sizing: border-box;
   padding: 1em;
   align-content: center;
   justify-content: center;
   display: flex;
-  min-height: 120px;
-  border: none; }
+  min-height: 90px;
+  border: none;
+  background: blue; }
+  .search-area .divider-vert {
+    height: 22px;
+    width: 1px;
+    display: inline-block;
+    background: #2c2626; }
   .search-area button {
     background: #fff;
     border: 1px solid transparent;
-    margin: .3em;
-    padding: .5em;
+    text-align: center !important;
+    margin: .4em;
+    padding: .3em 1em .3em 1em;
     font-family: "Robot Mono", monospace;
     font-size: 13px; }
   .search-area button:hover {
     background: #000;
-    coloR: #fff; }
+    color: #fff; }
   .search-area input[type=search] {
     display: inline-block;
     border: transparent;
@@ -149,11 +160,13 @@ body {
     margin: .4em; }
   .search-area .saveimage {
     margin: .3em;
-    padding: .3em .3em .3em 1em;
     font-family: "Robot Mono", monospace;
-    font-size: 13px;
-    text-align: center;
-    min-width: 90px; }
+    font-size: 13px; }
+
+@media only screen and (max-width: 600px) {
+  .header-bar {
+    display: none;
+    background: red; } }
 
 @keyframes colorchange {
   0% {

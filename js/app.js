@@ -28,8 +28,6 @@ var main = function () {
 /* Listeners */
 
 
-
-
 //album type means it's loaded into the selection area
 
 
