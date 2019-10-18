@@ -33,7 +33,7 @@ $(document).on("click", ".album-type img", function () {
     console.log(albuminfo);
     console.log(album);
 
-    $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').html("<p>" + albuminfo + "</p>").addClass("alb-item");
+    $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').css('background-size', 'contain').html("<p>" + albuminfo + "</p>").addClass("alb-item");
 
 });
 
@@ -67,7 +67,7 @@ const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wr
 
 /* Save */
 
-function saveImage() {
+var saveImage = function() {
 
     /* save image */
     domtoimage.toBlob(document.getElementById('collage'))
@@ -87,5 +87,40 @@ function saveImage() {
     });
 
 
-
 }
+
+
+var optionResize = function(method){
+    switch(method){
+        case "3x3": 
+            $(".collage-wrapper").html(" "); // reset
+            for(let i=0;i<9;i++){
+                $(".collage-wrapper").append('<div class="album-box alb-empty"></div>');
+            }
+            console.log("LOL");
+            break;
+        
+            
+        case "5x5": 
+            $(".collage-wrapper").html(" "); // reset
+            for(let i=0;i<25;i++){
+                $(".collage-wrapper").append('<div class="album-box alb-empty alb-size-two"></div>');
+            }
+            console.log("LOL");
+            break;
+    }
+    
+            
+}
+
+
+
+$('.options-area *[data-id="3x3"]').click(function(){
+    console.log("fuck u");
+    optionResize("3x3");
+});
+
+$('.options-area *[data-id="5x5"]').click(function(){
+    console.log("fuck u");
+    optionResize("5x5");
+});

@@ -17,7 +17,7 @@ var displayQuery = function () {
         artistSearch = $('.input-finder').val();
         console.log(artistSearch); // log the results of the artist being searched, for reference
         artistSearch = convert(artistSearch);
-        displayQuery.fetchMusic(artistSearch); // perform artist search
+        this.fetchMusic(artistSearch); // perform artist search
     }
 
     // fetchMusic(artist or album)
