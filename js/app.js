@@ -47,21 +47,18 @@ $(document).on("click", ".alb-item", function () {
 });
 
 
-
-
 /* Swappable Code */
 const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wrapper'), {
         draggable: '.album-box, .album-box .album-item',
 
         mirror: {
-            constrainDimensions: true,
+            constrainDimensions: false,
         },
         plugins: [Plugins.ResizeMirror]
     })
     .on('swappable:start', () => console.log('swappable:start'))
     .on('swappable:swapped', () => console.log('swappable:swapped'))
     .on('swappable:stop', () => console.log('swappable:stop'));
-
 
 
 
