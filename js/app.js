@@ -68,7 +68,6 @@ const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wr
 /* Save */
 
 var saveImage = function() {
-
     /* save image */
     domtoimage.toBlob(document.getElementById('collage'))
         .then(function (blob) {
@@ -86,9 +85,10 @@ var saveImage = function() {
         console.error('oops, something went wrong!', error);
     });
 
-
 }
 
+
+// Resize options
 
 var optionResize = function(method){
     switch(method){
@@ -109,8 +109,7 @@ var optionResize = function(method){
             console.log("LOL");
             break;
     }
-    
-            
+                
 }
 
 
@@ -123,4 +122,9 @@ $('.options-area *[data-id="3x3"]').click(function(){
 $('.options-area *[data-id="5x5"]').click(function(){
     console.log("fuck u");
     optionResize("5x5");
+});
+
+
+$('.btn-saveimage').click(function(){
+    saveImage();
 });

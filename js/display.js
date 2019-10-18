@@ -1,16 +1,16 @@
-function convert(string) {
-    return string.replace(/ /g, "+");
-}
-
-
-
 
 // Handles display calls
+
+
 var displayQuery = function () {
     console.log("This is display.");
 
     var artistSearch; // i.e. "Car Seat Headrest"
     var artistQuery; // contains artist/album information
+
+    function convert(string) {
+    return string.replace(/ /g, "+");
+}
 
     // Called when user inputs an album name and hits Generate
     function render() {
@@ -104,7 +104,7 @@ var displayQuery = function () {
             if (badsearch >= artistQuery.album.length) {
                 console.log("yo");
 
-                var getqueryagain = convert($('.input-finder').val());
+                var getqueryagain = this.convert($('.input-finder').val());
 
                 // let's try the after
                 displayQuery.getAlbum(getqueryagain);
@@ -115,14 +115,8 @@ var displayQuery = function () {
     }
 
     return {
-        displayAlbums: displayAlbums,
-        render: render,
-        fetchMusic: fetchMusic,
-        imgay: imgay,
-        getArtist: getArtist,
-        getAlbum: getAlbum
+        render: render
     }
-
 
 }();
 
