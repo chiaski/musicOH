@@ -69,16 +69,13 @@ body {
   display: block;
   padding-top: 100%; }
 
-.album-type img {
-  max-height: 100%; }
-
 /* where albums are displayed */
 .album-list {
   display: inline-block;
   z-index: 9999;
   bottom: 0;
   width: 100%;
-  min-height: 200px;
+  height: 150px;
   padding: 1em;
   left: 0;
   box-sizing: border-box;
@@ -87,6 +84,12 @@ body {
   display: flex;
   align-items: baseline;
   background: black; }
+  .album-list .album-type {
+    height: 120px !important;
+    width: 120px !important;
+    margin-right: -1em; }
+  .album-list .album-type img {
+    max-height: 100%; }
 
 .album-list > .album-box {
   border: none; }
@@ -121,8 +124,22 @@ body {
 .main {
   width: 100%; }
 
-.header-container .header-title {
-  font-family: "Robot Mono", monospace; }
+.header-container .header-bar {
+  display: flex;
+  align-content: space-between;
+  padding: 1em; }
+  .header-container .header-bar .header-title {
+    font-size: 14px;
+    font-family: "Robot Mono", monospace; }
+  .header-container .header-bar .options-area {
+    margin-left: auto; }
+    .header-container .header-bar .options-area button {
+      background: 0;
+      font-size: 12px; }
+
+@media only screen and (max-width: 600px) {
+  .header-container .header-bar {
+    display: none !important; } }
 
 .search-area {
   width: 100%;
@@ -133,8 +150,7 @@ body {
   justify-content: center;
   display: flex;
   min-height: 90px;
-  border: none;
-  background: blue; }
+  border: none; }
   .search-area .divider-vert {
     height: 22px;
     width: 1px;
@@ -167,10 +183,8 @@ body {
     font-size: 13px; }
 
 @media only screen and (max-width: 800px) {
-  .header-bar {
-    display: none; }
   input[type=search] {
-    min-width: 50px !important;
+    min-width: 90px !important;
     display: inline-block !important; }
   .btn-sizes {
     display: none; } }

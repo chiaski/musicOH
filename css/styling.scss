@@ -103,9 +103,6 @@ body {
 }
 
 
-.album-type img {
-    max-height: 100%;
-}
 
 
 /* where albums are displayed */
@@ -115,7 +112,7 @@ body {
     z-index: 9999;
     bottom: 0;
     width: 100%;
-    min-height: 200px;
+    height: 150px;
     padding: 1em;
     left: 0;
     box-sizing: border-box;
@@ -124,6 +121,15 @@ body {
     display: flex;
     align-items: baseline;
     background: black;
+    .album-type{
+        height:120px !important;
+        width:120px !important;
+        margin-right:-1em;
+    }
+.album-type img {
+    max-height: 100%;
+}
+    
 }
 
 .album-list > .album-box {
@@ -195,8 +201,30 @@ body {
 
 .header-container{
     
-    .header-title{
-    font-family: "Robot Mono", monospace;
+    .header-bar{
+        display:flex;
+        align-content: space-between;
+        padding:1em;
+        
+         .header-title{
+             font-size:14px;
+            font-family: "Robot Mono", monospace;
+            }
+    
+        .options-area{
+            margin-left: auto;
+            button{
+                background:0;
+                font-size:12px;
+            }
+        }
+    }
+    
+    
+    @media  only screen and (max-width: 600px) {
+        .header-bar{
+            display:none !important;
+        }
     }
 }
 
@@ -210,8 +238,6 @@ body {
     display: flex;
     min-height: 90px;
     border: none;
-    background:blue;
-    
     
     .divider-vert{
         height:22px;
@@ -256,12 +282,9 @@ body {
 }
 
     @media  only screen and (max-width: 800px) {
-        .header-bar{
-            display:none;
-        }
         
     input[type=search] {
-        min-width: 50px !important;
+        min-width: 90px !important;
         display:inline-block !important;
         }
         
