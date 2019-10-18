@@ -19,6 +19,7 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x:hidden;
 }
 
 .main-container {
@@ -48,12 +49,14 @@ body {
     z-index: 999;
     touch-action: manipulation;
     cursor: pointer;
+    position: relative;
 
 
     p {
-        pointer-events: none;
         position: absolute;
-        top: 30%;
+        pointer-events: none;
+        top:0;
+        left:0;
         font-size: 12px;
         line-height: 12px;
         text-align: center;
@@ -131,8 +134,6 @@ body {
 /* collage part */
 
 .collage-area {
-    background:red;
-    border-bottom:10px solid blue;
     display:flex;
 
     
@@ -148,7 +149,6 @@ body {
 .collage-wrapper {
 
     cursor: pointer;
-    background:yellow;
     box-sizing: border-box;
 
     margin:auto;    
@@ -167,14 +167,12 @@ body {
     .alb-size-one{
         width: calc(96% / 3);
         height: calc(96% / 3);
-        background:yellow;
     }
     
     
     .alb-size-two{
         width: calc(91% / 5);
         height: calc(91% / 5);
-        background:blue;
     }
 
     
@@ -182,7 +180,6 @@ body {
     .alb-size-three{
         width: calc(100% / 7);
         height: calc(100% / 7);
-        background:red;
     }
 
 
@@ -261,7 +258,6 @@ body {
     @media  only screen and (max-width: 800px) {
         .header-bar{
             display:none;
-            background:red;
         }
         
     input[type=search] {
