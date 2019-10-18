@@ -97,7 +97,7 @@ body {
   display: flex;
   /*animation: colorchange 30s infinite;
     -webkit-animation: colorchange 30s infinite;*/
-  max-height: 60%;
+  max-height: 80%;
   text-align: center; }
 
 .collage-wrapper {
@@ -106,7 +106,7 @@ body {
   box-sizing: border-box;
   margin: auto;
   width: 90%;
-  max-width: 580px;
+  max-width: 630px !important;
   align-content: space-between;
   justify-content: space-between;
   /* box sizing */ }
