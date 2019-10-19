@@ -247,7 +247,7 @@ body {
     }
     
     button {
-    background:#fff;
+    background:transparent;
     border: 1px solid transparent;
     text-align: center !important;
     margin: .4em;
@@ -264,6 +264,7 @@ body {
     
     input[type=search] {
     display: block;
+    background:transparent;
     border:transparent;
     border-bottom:1px solid #272222;
     padding: .5em;

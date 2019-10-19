@@ -12,17 +12,10 @@ var main = function () {
 }();
 
 
-
 /* Listeners */
 
 
 //album type means it's loaded into the selection area
-
-
-$(".album-type").click(function () {
-    console.log("You clicked me!");
-});
-
 
 $(document).on("click", ".album-type img", function () {
     console.log("bro");
@@ -68,7 +61,6 @@ const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wr
 /* Save */
 
 var saveImage = function() {
-    /* save image */
     domtoimage.toBlob(document.getElementById('collage'))
         .then(function (blob) {
             window.saveAs(blob, 'collageOH.png');
@@ -76,7 +68,6 @@ var saveImage = function() {
         });
 
     /* Append image to a div */
-
     domtoimage.toPng(document.getElementById('collage')).then(function (dataUrl) {
         var img = new Image();
         img.src = dataUrl;
@@ -112,7 +103,7 @@ var optionResize = function(method){
                 
 }
 
-
+// Button attachments
 
 $('.options-area *[data-id="3x3"]').click(function(){
     console.log("fuck u");

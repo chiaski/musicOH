@@ -1,5 +1,4 @@
 
-
 // Handles display calls
 var displayQuery = (function(){
     console.log("This is display.");
@@ -18,12 +17,6 @@ var displayQuery = (function(){
         artistSearch = convert(artistSearch);
         getArtist(artistSearch); // perform artist search
     }
-
-
-    function imgay() {
-        console.log("Yes you are gay!");
-    };
-
 
     function getArtist(music) {
         fetch('https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + music + '&api_key=602cdfee63f450d681a00c86afca33c5&format=json')
@@ -84,7 +77,7 @@ var displayQuery = (function(){
 
             // Only append the album image to the album selector if there exists an URL for it
 
-            // Consider cookies to save selection on browser reload later on
+            /* TODO: Consider cookies to save selection on browser reload later on */
             if (artistQuery.album[i].image[2]['#text'].length !== 0) {
                 $(".album-list").append(albumContent);
             } else {

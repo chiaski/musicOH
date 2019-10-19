@@ -157,7 +157,7 @@ body {
     display: inline-block;
     background: #2c2626; }
   .search-area button {
-    background: #fff;
+    background: transparent;
     border: 1px solid transparent;
     text-align: center !important;
     margin: .4em;
@@ -169,6 +169,7 @@ body {
     color: #fff; }
   .search-area input[type=search] {
     display: block;
+    background: transparent;
     border: transparent;
     border-bottom: 1px solid #272222;
     padding: .5em;
