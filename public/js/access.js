@@ -58,7 +58,7 @@ var funcSpotify = (function(){
                 let item = myJson.results.albummatches.album[0];
             
                 let album = item.image[2]['#text'];
-                let albuminfo = item.artist + item.name
+                let albuminfo = item.artist + " - " + item.name
 
                 $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').css('background-size', 'contain').html("<p>" + albuminfo + "</p>").addClass("alb-item");
             

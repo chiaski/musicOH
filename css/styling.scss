@@ -1,3 +1,8 @@
+/* Imports
+*/
+
+@import url("https://use.typekit.net/bgf2wdh.css");
+
 /*  Color 
     to be used for modes later on, maybe? */
 
@@ -55,15 +60,18 @@ body {
     p {
         position: absolute;
         pointer-events: none;
-        top:0;
+        top:5em;
         left:0;
         font-size: 12px;
         line-height: 12px;
         text-align: center;
-        width: 100%;
         box-sizing: border-box;
         padding: 1em;
-        color: transparent;
+        background-color: rgba(255, 255, 255, 0);
+        color:transparent;
+        text-shadow:0 0 20px transparent;
+        max-width:90%;
+        display:inline-block;
 
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -80,18 +88,14 @@ body {
     touch-action: manipulation;
 }
 
-/*
-.album-box:hover + .album-box p {
-    display: block;
-}*/
-
-
 .album-box:hover p {
     color: black !important;
 }
 
 .album-box:hover {
-    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    color: #020101;
+    text-shadow:0 0 20px #000;
 }
 
 
@@ -208,8 +212,14 @@ body {
         
          .header-title{
              font-size:14px;
-            font-family: "Robot Mono", monospace;
+             font-family: proxima-nova, sans-serif;
+             font-weight:700;
             }
+        
+        .header-title a{
+            text-decoration: none;
+            color:#262020;
+        }
     
         .options-area{
             margin-left: auto;
@@ -239,9 +249,10 @@ body {
     display: flex;
     min-height: 90px;
     border: none;
+    font-family: proxima-nova, sans-serif;
     
     .divider-vert{
-        height:22px;
+        height:12px;
         width:1px;
         display:inline-block;
         background:#2c2626;
@@ -253,7 +264,6 @@ body {
     text-align: center !important;
     margin: .4em;
     padding: .3em 1em .3em 1em;
-    font-family: "Robot Mono", monospace;
     font-size: 13px;
     }
 
@@ -278,7 +288,6 @@ body {
     
     .btn-saveimage {
     margin: .3em;
-    font-family: "Robot Mono", monospace;
     font-size: 13px;
     }
 }
