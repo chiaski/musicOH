@@ -23,7 +23,7 @@ var funcSpotify = (function(){
 
     // Replace with your app's client ID, redirect URI and desired scopes
     const clientId = '4f64af93d86a47febcb27f17d20e4044';
-    const redirectUri = 'http://localhost:8080/public/';
+    const redirectUri = 'https://chia.dev/musicOH/';
     const scopes = [
       'user-top-read'
     ];
