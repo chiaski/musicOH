@@ -191,6 +191,19 @@ body {
     margin: .3em;
     font-size: 13px; }
 
+/* ETCETERA */
+.pop-up {
+  position: absolute !important;
+  z-index: 9999;
+  margin: auto;
+  padding: 1em;
+  width: 40vw !important;
+  height: 30vh !important;
+  background: #000 !important;
+  color: #ebf6f7;
+  border: 1px solid #000; }
+
+/* MEDIA */
 @media only screen and (max-width: 800px) {
   input[type=search] {
     min-width: 90px !important;
@@ -198,6 +211,7 @@ body {
   .btn-sizes {
     display: none; } }
 
+/* STUFF */
 @keyframes colorchange {
   0% {
     background: #f4dfe2; }

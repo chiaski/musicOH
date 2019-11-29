@@ -15,7 +15,8 @@ var main = function () {
 /* Listeners */
 
 
-//album type means it's loaded into the selection area
+// album type means it's loaded into the selection area
+
 
 $(document).on("click", ".album-type img", function () {
     console.log("bro");
@@ -118,4 +119,9 @@ $('.options-area *[data-id="5x5"]').click(function(){
 
 $('.btn-saveimage').click(function(){
     saveImage();
+});
+
+
+$('.pop-up').click(function(){
+    $(this).fadeOut();
 });
