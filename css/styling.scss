@@ -1,13 +1,10 @@
-/* Imports
-*/
-
-@import url("https://use.typekit.net/bgf2wdh.css");
+/* Imports */
+@import "externals"
 
 /*  Color 
     to be used for modes later on, maybe? */
 
 $bg: #fbfdfd;
-
 
 /* Main Styling */
 
@@ -20,11 +17,13 @@ body {
     /* you could also use milliseconds (ms) or something like 2.5s */
     //-webkit-animation: colorchange 30s infinite;
     /* Chrome and Safari */
-
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x:hidden;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .main-container {
@@ -35,9 +34,7 @@ body {
 }
 
 
-
-/* Draggable duplicates divs with this fucking calculation problem */
-
+/* Draggable */
 
 .collage-wrapper .album-box {
     width: 30%;
@@ -107,8 +104,6 @@ body {
 }
 
 
-
-
 /* where albums are displayed */
 
 .album-list {
@@ -125,14 +120,16 @@ body {
     display: flex;
     align-items: baseline;
     background: black;
+    
     .album-type{
         height:120px !important;
         width:120px !important;
         margin-right:-1em;
     }
-.album-type img {
-    max-height: 100%;
-}
+    
+    .album-type img {
+        max-height: 100%;
+    }
     
 }
 
@@ -184,6 +181,7 @@ body {
     .alb-size-two{
         width: calc(89% / 5);
         height: calc(89% / 5);
+        margin:0 .2em .1em .2em;
     }
 
 
@@ -208,12 +206,15 @@ body {
     
     .header-bar{
         display:flex;
+            font-family: proxima-nova, sans-serif;
         align-content: space-between;
         padding:1em;
         
          .header-title{
+            font-family: termina, sans-serif;
+            font-weight: 700;
+            font-style: normal;
              font-size:14px;
-             font-family: proxima-nova, sans-serif;
              font-weight:700;
             }
         
@@ -298,22 +299,46 @@ body {
 
 
 .pop-up{
+    display:none;
     position:absolute !important;
+    top:50%; left:50%;
+    margin-top: -15vh;
+    margin-left: -20vw;
+    padding:.5em;
     z-index:9999;
-    margin:auto;
     padding:1em;
-    width:40vw !important;
-    height:30vh !important;
+    width:40vw;
     background:#000 !important;
     color:#ebf6f7;
+    font-family:"Work Sans";
+    line-height:1.4em;
     border:1px solid #000;
+    
+    h1{
+        margin:0;
+        text-align: center;
+        font-family:"Work Sans";
+    }
+    
+    strong{
+        border-bottom:1px solid #fff;
+    }
+    
+    
+    @media  only screen and (max-width: 800px) {
+        width:100%;
+        margin:0;
+        left:0;
+        top:20%;
+        height:auto;
+    }
+    
+    
 }
 
 
 
-
-
-/* MEDIA */
+/* Mobile */
 
 
     @media  only screen and (max-width: 800px) {
@@ -329,100 +354,3 @@ body {
 
 
 
-/* STUFF */
-
-
-@keyframes colorchange {
-    0% {
-        background: #f4dfe2;
-    }
-
-    10% {
-        background: #f5dccc;
-    }
-
-    20% {
-        background: #f5f3cc;
-    }
-
-    30% {
-        background: #c3e7c4;
-    }
-
-    40% {
-        background: #c3e7e7;
-    }
-
-    50% {
-        background: #c3d6e7;
-    }
-
-    60% {
-        background: #bdbdee;
-    }
-
-    70% {
-        background: #e0d6ed;
-    }
-
-    80% {
-        background: #ecd6f2;
-    }
-
-    90% {
-        background: #f4cee7;
-    }
-
-    100% {
-        background: #f4dfe2;
-    }
-}
-
-@-webkit-keyframes colorchange
-
-/* Safari and Chrome - necessary duplicate */
-    {
-    0% {
-        background: #f4dfe2;
-    }
-
-    10% {
-        background: #f5dccc;
-    }
-
-    20% {
-        background: #f5f3cc;
-    }
-
-    30% {
-        background: #c3e7c4;
-    }
-
-    40% {
-        background: #c3e7e7;
-    }
-
-    50% {
-        background: #c3d6e7;
-    }
-
-    60% {
-        background: #bdbdee;
-    }
-
-    70% {
-        background: #e0d6ed;
-    }
-
-    80% {
-        background: #ecd6f2;
-    }
-
-    90% {
-        background: #f4cee7;
-    }
-
-    100% {
-        background: #f4dfe2;
-    }
-}

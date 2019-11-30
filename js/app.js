@@ -42,31 +42,6 @@ $(document).on("click", ".alb-item", function () {
 
 
 
-
-// Resize options
-
-var optionResize = function(method){
-    switch(method){
-        case "3x3": 
-            $(".collage-wrapper").html(" "); // reset
-            for(let i=0;i<9;i++){
-                $(".collage-wrapper").append('<div class="album-box alb-empty"></div>');
-            }
-            console.log("LOL");
-            break;
-        
-            
-        case "5x5": 
-            $(".collage-wrapper").html(" "); // reset
-            for(let i=0;i<25;i++){
-                $(".collage-wrapper").append('<div class="album-box alb-empty alb-size-two"></div>');
-            }
-            console.log("LOL");
-            break;
-    }
-                
-}
-
 // Button attachments
 
 $('.options-area *[data-id="3x3"]').click(function(){

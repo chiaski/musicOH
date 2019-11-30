@@ -119,8 +119,3 @@ $('.btn-saveimage').click(function(){
 });
 
 
-$('.pop-up').click(function(){
-    $(this).fadeOut();
-});
-
-

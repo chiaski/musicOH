@@ -1,6 +1,4 @@
-@import url(https://use.typekit.net/bgf2wdh.css);
-/* Imports
-*/
+/* Imports */
 /*  Color 
     to be used for modes later on, maybe? */
 /* Main Styling */
@@ -120,7 +118,8 @@ body {
     height: calc(96% / 3); }
   .collage-wrapper .alb-size-two {
     width: calc(89% / 5);
-    height: calc(89% / 5); }
+    height: calc(89% / 5);
+    margin: 0 .2em .1em .2em; }
   .collage-wrapper .alb-size-three {
     width: calc(100% / 7);
     height: calc(100% / 7); }
@@ -193,15 +192,34 @@ body {
 
 /* ETCETERA */
 .pop-up {
+  display: none;
   position: absolute !important;
+  top: 50%;
+  left: 50%;
+  margin-top: -15vh;
+  margin-left: -20vw;
+  padding: .5em;
   z-index: 9999;
-  margin: auto;
   padding: 1em;
-  width: 40vw !important;
-  height: 30vh !important;
+  width: 40vw;
   background: #000 !important;
   color: #ebf6f7;
+  font-family: "Work Sans";
+  line-height: 1.4em;
   border: 1px solid #000; }
+  .pop-up h1 {
+    margin: 0;
+    text-align: center;
+    font-family: "Work Sans"; }
+  .pop-up strong {
+    border-bottom: 1px solid #fff; }
+  @media only screen and (max-width: 800px) {
+    .pop-up {
+      width: 100%;
+      margin: 0;
+      left: 0;
+      top: 20%;
+      height: auto; } }
 
 /* MEDIA */
 @media only screen and (max-width: 800px) {
