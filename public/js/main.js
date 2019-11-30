@@ -65,6 +65,13 @@ var optionResize = function(method){
             }
             
             break;
+            
+               
+        case "display": 
+            $(".album-box p").css("color", "black");
+            $(".album-box p").css("background", "yellow");
+            $(".collage-wrapper").addClass('wordDisplay')
+            break;
     }
                 
 }
@@ -82,7 +89,6 @@ const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wr
     .on('swappable:start', () => console.log('swappable:start'))
     .on('swappable:swapped', () => console.log('swappable:swapped'))
     .on('swappable:stop', () => console.log('swappable:stop'));
-
 
 
 
@@ -104,13 +110,15 @@ $('.btn-generateAlbums').click(function(){
 
 
 $('.options-area *[data-id="3x3"]').click(function(){
-    console.log("fuck u");
     optionResize("3x3");
 });
 
 $('.options-area *[data-id="5x5"]').click(function(){
-    console.log("fuck u");
     optionResize("5x5");
+});
+
+$('.options-area *[data-id="display"]').click(function(){
+    optionResize("display");
 });
 
 

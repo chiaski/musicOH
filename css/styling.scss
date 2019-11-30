@@ -53,12 +53,13 @@ body {
     touch-action: manipulation;
     cursor: pointer;
     position: relative;
+        font-family: termina, sans-serif !important;
 
 
     p {
         position: absolute;
         pointer-events: none;
-        top:5em;
+        top:0;
         left:0;
         font-size: 12px;
         line-height: 12px;
@@ -87,15 +88,12 @@ body {
 
 .album-box:hover p {
     color: black !important;
-        font-family: termina, sans-serif !important;
-        font-weight: 700;
+        font-weight: :hover700;
     text-align: center;
     background:yellow;
-    margin:auto;
 }
 
 .album-box:hover {
-    background-color: rgba(255, 255, 255, 0.6) !important;
     color: #020101;
     text-shadow:0 0 20px #000;
 }
@@ -199,6 +197,11 @@ body {
     }
 
 
+}
+
+.wordDisplay{
+    color:black !important;
+    background: yellow !important;
 }
 
 /* search area */
