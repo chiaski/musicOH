@@ -43,43 +43,6 @@ $(document).on("click", ".alb-item", function () {
 
 
 
-/* Swappable Code */
-const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wrapper'), {
-        draggable: '.album-box, .album-box .album-item',
-
-        mirror: {
-            constrainDimensions: true,
-        },
-        plugins: [Plugins.ResizeMirror]
-    })
-    .on('swappable:start', () => console.log('swappable:start'))
-    .on('swappable:swapped', () => console.log('swappable:swapped'))
-    .on('swappable:stop', () => console.log('swappable:stop'));
-
-
-
-
-/* Save */
-
-var saveImage = function() {
-    domtoimage.toBlob(document.getElementById('collage'))
-        .then(function (blob) {
-            window.saveAs(blob, 'collageOH.png');
-
-        });
-
-    /* Append image to a div */
-    domtoimage.toPng(document.getElementById('collage')).then(function (dataUrl) {
-        var img = new Image();
-        img.src = dataUrl;
-        $("#image-test").append(img);
-    }).catch(function (error) {
-        console.error('oops, something went wrong!', error);
-    });
-
-}
-
-
 // Resize options
 
 var optionResize = function(method){
@@ -118,7 +81,7 @@ $('.options-area *[data-id="5x5"]').click(function(){
 
 
 $('.btn-saveimage').click(function(){
-    saveImage();
+    displayQuery._saveImage();
 });
 
 

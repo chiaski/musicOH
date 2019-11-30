@@ -1,7 +1,6 @@
 $(function() {
-    const wishesCollection = new WishesCollection();
-    wishesCollection.subscribe();
+    // const wishesCollection = new WishesCollection();
+    // wishesCollection.subscribe();
 
     
 });
-

@@ -87,7 +87,6 @@ var displayQuery = (function(){
 
             // If lots of bad searches, retry with albums
             if (badsearch >= artistQuery.album.length) {
-                console.log("yo");
 
                 var getqueryagain = convert($('.input-finder').val());
 
@@ -98,23 +97,36 @@ var displayQuery = (function(){
 
         }
     }
+    
+    
+    /* Save */
+
+    function _saveImage() {
+        domtoimage.toBlob(document.getElementById('collage'))
+            .then(function (blob) {
+                window.saveAs(blob, 'collageOH.png');
+
+            });
+
+        /* Append image to a div */
+        domtoimage.toPng(document.getElementById('collage')).then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
+            $("#image-test").append(img);
+        }).catch(function (error) {
+            console.error('oops, something went wrong!', error);
+        });
+
+    }
 
     return {
         displayAlbums: displayAlbums,
         render: render,
         getArtist: getArtist,
-        getAlbum: getAlbum
+        getAlbum: getAlbum,
+        _saveImage: _saveImage
     };
 
 
 })();
 
-
-// Listen to keypress on main
-
-$(".input-finder").keypress(function (event) {
-    if (event.keyCode === 13) { // 13 is "enter"
-        event.preventDefault(); // Cancel page reloed
-        displayQuery.render(); //displayRender fetches 
-    }
-});

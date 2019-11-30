@@ -75,5 +75,4 @@ $('.spotify-test').click(function(){
     // https://accounts.spotify.com/authorize?client_id=4f64af93d86a47febcb27f17d20e4044&redirect_uri=http:%2F%2Flocalhost:8080%2Fpublic%2F&scope=user-read-private%20user-read-email&response_type=token&state=123
     funcSpotify();
     
-    
 });

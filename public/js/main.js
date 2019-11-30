@@ -23,18 +23,66 @@ $(document).on("click", ".alb-item", function () {
 });
 
 
+// Save
+
+
+var saveImage = function() {
+    domtoimage.toBlob(document.getElementById('collage'))
+        .then(function (blob) {
+            window.saveAs(blob, 'collageOH.png');
+
+        });
+
+    /* Append image to a div */
+    domtoimage.toPng(document.getElementById('collage')).then(function (dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        $("#image-test").append(img);
+    }).catch(function (error) {
+        console.error('oops, something went wrong!', error);
+    });
+
+}
+
+
+// Resize options
+
+var optionResize = function(method){
+    switch(method){
+        case "3x3": 
+            $(".collage-wrapper").html(" "); // reset
+            for(let i=0;i<9;i++){
+                $(".collage-wrapper").append('<div class="album-box alb-empty"></div>');
+            }
+            console.log("LOL");
+            break;
+        
+            
+        case "5x5": 
+            $(".collage-wrapper").html(" "); // reset
+            for(let i=0;i<25;i++){
+                $(".collage-wrapper").append('<div class="album-box alb-empty alb-size-two"></div>');
+            }
+            console.log("LOL");
+            break;
+    }
+                
+}
+
+
 /* Swappable Code */
 const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wrapper'), {
-        draggable: '.album-box .album-item',
+        draggable: '.album-box, .album-box .album-item',
 
         mirror: {
-            constrainDimensions: false,
+            constrainDimensions: true,
         },
         plugins: [Plugins.ResizeMirror]
     })
     .on('swappable:start', () => console.log('swappable:start'))
     .on('swappable:swapped', () => console.log('swappable:swapped'))
     .on('swappable:stop', () => console.log('swappable:stop'));
+
 
 
 
@@ -49,6 +97,10 @@ $(".input-finder").keypress(function (event) {
     }
 });
 
+
+$('.btn-generateAlbums').click(function(){
+    displayQuery.render();
+});
 
 
 $('.options-area *[data-id="3x3"]').click(function(){
