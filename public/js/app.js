@@ -14,9 +14,13 @@ $(function() {
     }, 3000);
     };  
     
+    
+    // If pop-up appears 
+    
     $(document).click(function (event) {            
         $('.pop-up:visible').fadeOut();
     });
+    
     
     
 });
