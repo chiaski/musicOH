@@ -3,14 +3,18 @@
     to be used for modes later on, maybe? */
 /* Main Styling */
 body {
-  background: #fbfdfd;
+  background: #0c1237;
+  color: #f3f7f6;
   /* animation-name followed by duration in seconds*/
   /* you could also use milliseconds (ms) or something like 2.5s */
   /* Chrome and Safari */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal; }
 
 .main-container {
   height: 100%;
@@ -18,7 +22,7 @@ body {
   box-sizing: border-box;
   overflow-x: hidden; }
 
-/* Draggable duplicates divs with this fucking calculation problem */
+/* Draggable */
 .collage-wrapper .album-box {
   width: 30%; }
 
@@ -28,7 +32,7 @@ body {
   margin: .3em;
   background-image: url();
   background-size: contain;
-  border: 1px solid #1f1c1c;
+  border: 1px solid #edbab9;
   z-index: 999;
   touch-action: manipulation;
   cursor: pointer;
@@ -130,15 +134,17 @@ body {
 
 .header-container .header-bar {
   display: flex;
+  font-family: termina, sans-serif !important;
+  font-weight: 700;
+  font-style: normal;
   align-content: space-between;
   padding: 1em; }
   .header-container .header-bar .header-title {
     font-size: 14px;
-    font-family: proxima-nova, sans-serif;
     font-weight: 700; }
   .header-container .header-bar .header-title a {
     text-decoration: none;
-    color: #262020; }
+    color: #ebc8c7 !important; }
   .header-container .header-bar .options-area {
     margin-left: auto; }
     .header-container .header-bar .options-area button {
@@ -148,6 +154,9 @@ body {
 @media only screen and (max-width: 600px) {
   .header-container .header-bar {
     display: none !important; } }
+
+::placeholder {
+  color: #ebc8c7; }
 
 .search-area {
   width: 100%;
@@ -164,7 +173,7 @@ body {
     height: 12px;
     width: 1px;
     display: inline-block;
-    background: #2c2626; }
+    background: #edbab9; }
   .search-area button {
     background: transparent;
     border: 1px solid transparent;
@@ -179,7 +188,7 @@ body {
     display: block;
     background: transparent;
     border: transparent;
-    border-bottom: 1px solid #272222;
+    border-bottom: 1px solid #ebc8c7;
     padding: .5em;
     font-family: "Work Sans";
     min-width: 300px;
@@ -221,62 +230,11 @@ body {
       top: 20%;
       height: auto; } }
 
-/* MEDIA */
+/* Mobile */
 @media only screen and (max-width: 800px) {
   input[type=search] {
     min-width: 90px !important;
     display: inline-block !important; }
   .btn-sizes {
     display: none; } }
-
-/* STUFF */
-@keyframes colorchange {
-  0% {
-    background: #f4dfe2; }
-  10% {
-    background: #f5dccc; }
-  20% {
-    background: #f5f3cc; }
-  30% {
-    background: #c3e7c4; }
-  40% {
-    background: #c3e7e7; }
-  50% {
-    background: #c3d6e7; }
-  60% {
-    background: #bdbdee; }
-  70% {
-    background: #e0d6ed; }
-  80% {
-    background: #ecd6f2; }
-  90% {
-    background: #f4cee7; }
-  100% {
-    background: #f4dfe2; } }
-
-@-webkit-keyframes colorchange
-
-/* Safari and Chrome - necessary duplicate */ {
-  0% {
-    background: #f4dfe2; }
-  10% {
-    background: #f5dccc; }
-  20% {
-    background: #f5f3cc; }
-  30% {
-    background: #c3e7c4; }
-  40% {
-    background: #c3e7e7; }
-  50% {
-    background: #c3d6e7; }
-  60% {
-    background: #bdbdee; }
-  70% {
-    background: #e0d6ed; }
-  80% {
-    background: #ecd6f2; }
-  90% {
-    background: #f4cee7; }
-  100% {
-    background: #f4dfe2; } }
 

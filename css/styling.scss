@@ -1,10 +1,10 @@
 /* Imports */
-@import "externals"
 
 /*  Color 
     to be used for modes later on, maybe? */
 
-$bg: #fbfdfd;
+$bg: #0c1237;
+$white: #f3f7f6;
 
 /* Main Styling */
 
@@ -12,6 +12,7 @@ $bg: #fbfdfd;
 
 body {
     background: $bg;
+    color: $white;
     //animation: colorchange 30s infinite;
     /* animation-name followed by duration in seconds*/
     /* you could also use milliseconds (ms) or something like 2.5s */
@@ -47,7 +48,7 @@ body {
     margin: .3em;
     background-image: url();
     background-size: contain;
-    border: 1px solid #1f1c1c;
+    border: 1px solid #edbab9;
     z-index: 999;
     touch-action: manipulation;
     cursor: pointer;
@@ -206,21 +207,20 @@ body {
     
     .header-bar{
         display:flex;
-            font-family: proxima-nova, sans-serif;
+        font-family: termina, sans-serif !important;
+        font-weight: 700;
+        font-style: normal;
         align-content: space-between;
         padding:1em;
         
          .header-title{
-            font-family: termina, sans-serif;
-            font-weight: 700;
-            font-style: normal;
              font-size:14px;
              font-weight:700;
             }
         
         .header-title a{
             text-decoration: none;
-            color:#262020;
+             color:#ebc8c7 !important;
         }
     
         .options-area{
@@ -240,6 +240,10 @@ body {
     }
 }
 
+::placeholder{
+    color:#ebc8c7;
+}
+
 .search-area {
     width: 100%;
     display: inline-block;
@@ -256,7 +260,7 @@ body {
         height:12px;
         width:1px;
         display:inline-block;
-        background:#2c2626;
+        background:#edbab9;
     }
     
     button {
@@ -278,7 +282,7 @@ body {
     display: block;
     background:transparent;
     border:transparent;
-    border-bottom:1px solid #272222;
+    border-bottom:1px solid #ebc8c7;
     padding: .5em;
     font-family: "Work Sans";
     min-width: 300px;

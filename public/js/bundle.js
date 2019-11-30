@@ -91,9 +91,9 @@
   !*** ./css/styling.scss ***!
   \**************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\\nSassError: media query expression must begin with '('\\n        on line 7 of /Users/chia/Desktop/Chia/Code/musicOH/css/styling.scss\\n>> $bg: #fbfdfd;\\n\\n   ^\\n\\n    at /Users/chia/Desktop/Chia/Code/musicOH/node_modules/webpack/lib/NormalModule.js:316:20\\n    at /Users/chia/Desktop/Chia/Code/musicOH/node_modules/loader-runner/lib/LoaderRunner.js:367:11\\n    at /Users/chia/Desktop/Chia/Code/musicOH/node_modules/loader-runner/lib/LoaderRunner.js:233:18\\n    at context.callback (/Users/chia/Desktop/Chia/Code/musicOH/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\\n    at Object.callback (/Users/chia/Desktop/Chia/Code/musicOH/node_modules/sass-loader/dist/index.js:73:7)\\n    at Object.done [as callback] (/Users/chia/Desktop/Chia/Code/musicOH/node_modules/neo-async/async.js:8067:18)\\n    at options.error (/Users/chia/Desktop/Chia/Code/musicOH/node_modules/node-sass/lib/index.js:294:32)\");\n\n//# sourceURL=webpack:///./css/styling.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./css/styling.scss?");
 
 /***/ }),
 
