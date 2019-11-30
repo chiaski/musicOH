@@ -68,7 +68,6 @@ body {
         background-color: rgba(255, 255, 255, 0);
         color:transparent;
         text-shadow:0 0 20px transparent;
-        max-width:90%;
         display:inline-block;
 
         -webkit-touch-callout: none;
@@ -88,6 +87,11 @@ body {
 
 .album-box:hover p {
     color: black !important;
+        font-family: termina, sans-serif !important;
+        font-weight: 700;
+    text-align: center;
+    background:yellow;
+    margin:auto;
 }
 
 .album-box:hover {
@@ -108,6 +112,7 @@ body {
 /* where albums are displayed */
 
 .album-list {
+    position:fixed;
     display:inline-block;
     z-index: 9999;
     bottom: 0;
@@ -143,6 +148,8 @@ body {
 
 .collage-area {
     display:flex;
+    margin-top:-2em;
+    padding-bottom:100px;
 
     
     //background: $bg;
@@ -159,10 +166,10 @@ body {
     cursor: pointer;
     box-sizing: border-box;
 
-    margin:auto;    
-    width:100%;
+    margin:auto;   
+    width:100vw;
     padding:1em;
-    max-width:560px !important;
+    max-width:70vh !important;
     align-content: space-between;
     justify-content: space-between;
 
@@ -249,12 +256,12 @@ body {
     display: inline-block;
     box-sizing: border-box;
     padding: 1.1em;
+    margin-bottom:0;
     margin-top:-2.85em;
     align-content: center;
     justify-content: center;
     display: flex;
     min-height: 90px;
-    font-family: proxima-nova, sans-serif;
     
     .divider-vert{
         height:12px;
@@ -267,9 +274,10 @@ body {
     background:transparent;
     border: 1px solid transparent;
     text-align: center !important;
-    margin: .4em;
     padding: .3em 1em .3em 1em;
     font-size: 13px;
+    font-family: termina, sans-serif;
+    font-weight: 700;
     }
 
     
@@ -281,14 +289,14 @@ body {
     input[type=search] {
     display: block;
     background:transparent;
-    border:transparent;
+    border:none;
     border-bottom:1px solid #ebc8c7;
     padding: .5em;
-    font-family: "Work Sans";
     min-width: 300px;
-    font-weight:100 !important;
     text-align: center;
     margin: .4em;
+    font-family: termina, sans-serif;
+    font-weight: 500 !important;
     }
     
     .btn-saveimage {

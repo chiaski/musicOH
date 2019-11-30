@@ -54,7 +54,7 @@ var optionResize = function(method){
             for(let i=0;i<9;i++){
                 $(".collage-wrapper").append('<div class="album-box alb-empty"></div>');
             }
-            console.log("LOL");
+            
             break;
         
             
@@ -63,7 +63,7 @@ var optionResize = function(method){
             for(let i=0;i<25;i++){
                 $(".collage-wrapper").append('<div class="album-box alb-empty alb-size-two"></div>');
             }
-            console.log("LOL");
+            
             break;
     }
                 

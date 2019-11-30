@@ -6,10 +6,8 @@ $(function() {
     
     if (!localStorage.getItem('viewed')){
     setTimeout(function () {
-        alert("hi");
         
         $(".pop-up").fadeIn("slow");
-        
         localStorage.setItem('viewed','yes');
     }, 3000);
     };  

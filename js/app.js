@@ -22,7 +22,7 @@ $(document).on("click", ".album-type img", function () {
     console.log("bro");
 
     var album = $(this).attr('src'); // Gets image source of selected thing
-    var albuminfo = $(this).data('artist') + ' ' + $(this).data('album');
+    var albuminfo = $(this).data('artist') + '&mdash;' + $(this).data('album');
 
     console.log(albuminfo);
     console.log(album);
