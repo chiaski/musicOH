@@ -1,21 +1,4 @@
-/* Main App Module
-to be fixed later */
-
-var main = function () {
-
-    function hideAlbum() {
-
-    }
-
-}();
-
-
-
-
 /* Listeners */
-
-
-//album type means it's loaded into the selection area
 
 $(document).on("click", ".album-list img", function () {
     console.log("bro");
@@ -52,5 +35,40 @@ const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wr
     .on('swappable:start', () => console.log('swappable:start'))
     .on('swappable:swapped', () => console.log('swappable:swapped'))
     .on('swappable:stop', () => console.log('swappable:stop'));
+
+
+
+/* BUTTON LISTENERS */
+
+
+// On enter, run search query
+$(".input-finder").keypress(function (event) {
+    if (event.keyCode === 13) { // 13 is "enter"
+        event.preventDefault(); // Cancel page reloed
+        displayQuery.render(); //displayRender fetches 
+    }
+});
+
+
+
+$('.options-area *[data-id="3x3"]').click(function(){
+    console.log("fuck u");
+    optionResize("3x3");
+});
+
+$('.options-area *[data-id="5x5"]').click(function(){
+    console.log("fuck u");
+    optionResize("5x5");
+});
+
+
+$('.btn-saveimage').click(function(){
+    saveImage();
+});
+
+
+$('.pop-up').click(function(){
+    $(this).fadeOut();
+});
 
 
