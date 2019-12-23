@@ -62,20 +62,25 @@ body {
         font-family: termina, sans-serif !important;
 
 
+    /* Overlay title display */
+    
     p {
         position: absolute;
         pointer-events: none;
-        top:0;
-        left:0;
-        font-size: 12px;
-        line-height: 12px;
+        top:0; left:0;
+        width:100%;
+        margin:auto;
+        font-size: .7em;
+        line-height: 1em;
+        
         text-align: center;
         box-sizing: border-box;
-        padding: 1em;
-        background-color: rgba(255, 255, 255, 0);
-        color:transparent;
-        text-shadow:0 0 20px transparent;
-        display:inline-block;
+        padding: .5em;
+        background-color: $accent;
+        color: #000;
+        text-shadow:0 0 20px #000;       
+        display:none;
+
 
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -83,6 +88,14 @@ body {
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+    }
+    
+    .album-display{
+        display:block;
+    }
+    
+    .album-nodisplay{
+        display:none;
     }
 
 }
@@ -249,7 +262,6 @@ body {
 
 .wordDisplay{
     color:black !important;
-    background: yellow !important;
 }
 
 /* search area */

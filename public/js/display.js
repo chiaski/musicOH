@@ -65,13 +65,10 @@ var displayQuery = (function(){
         for (var i = 0; i < artistQuery.album.length; i++) {
 
             var albumContent;
-            var albumTitle;
 
             if (artistQuery.album[i].artist.name == undefined) {
                 //Query through direct artist tag
                  albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "' data-artist='" + artistQuery.album[i].artist + "' data-album='" + artistQuery.album[i].name + "'></div>";
-                
-                albumTitle = "<div class='album-title' data-artist='" + artistQuery.album[i].artist + "  data-album='" + artistQuery.album[i].name + "'><strong>" + artistQuery.album[i].artist + "</strong>&mdash;" + artistQuery.album[i].name + "</div>";
                 
                 
             } else {
@@ -79,7 +76,6 @@ var displayQuery = (function(){
                  albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "' data-artist='" + artistQuery.album[i].artist.name + "' data-album='" + artistQuery.album[i].name + "'></div>";
                 
                 
-                albumTitle = "<div class='album-title' data-artist='" + artistQuery.album[i].artist.name + "  data-album='" + artistQuery.album[i].name + "'><strong>" + artistQuery.album[i].artist.name + "</strong>&mdash;" + artistQuery.album[i].name + "</div>";
 
             }
 
@@ -130,38 +126,13 @@ var displayQuery = (function(){
 
     }
     
-    
-    /* Resize options */
-
-    function _resizeImage(method){
-        switch(method){
-            case "3x3": 
-                $(".collage-wrapper").html(" "); // reset
-                for(let i=0;i<9;i++){
-                    $(".collage-wrapper").append('<div class="album-box alb-empty"></div>');
-                }
-                console.log("LOL");
-                break;
-
-
-            case "5x5": 
-                $(".collage-wrapper").html(" "); // reset
-                for(let i=0;i<25;i++){
-                    $(".collage-wrapper").append('<div class="album-box alb-empty alb-size-two"></div>');
-                }
-                console.log("LOL");
-                break;
-        }
-
-    }
 
     return {
         displayAlbums: displayAlbums,
         render: render,
         getArtist: getArtist,
         getAlbum: getAlbum,
-        _saveImage: _saveImage,
-        _resizeImage: _resizeImage
+        _saveImage: _saveImage
     };
 
 

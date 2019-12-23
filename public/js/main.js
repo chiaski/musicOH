@@ -10,9 +10,6 @@ $(document).on("click", ".album-list img", function () {
     // first check if there is an empty album
     
     if( $(".album-box[class*='alb-empty']").first()[0] ){
-        
-        $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').html("<p>" + albuminfo + "</p>").addClass("alb-item");
-    
     
     let albTitle = $(this).data('album');
     
@@ -22,6 +19,10 @@ $(document).on("click", ".album-list img", function () {
     if(albTitle.length > 40){
         albTitle = albTitle.substr(0, 40) + "...";
     }
+    
+        
+        
+    $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').html("<p>" + $(this).data('artist') + "&mdash;" + albTitle + "</p>").addClass("alb-item");
     
     
     let title = "<div class='album-title' data-artist='" + $(this).data('artist') + "  data-album='" + $(this).data('album') + "'><strong>" + $(this).data('artist')  + "</strong>&mdash;" + albTitle + "</div>";
@@ -72,6 +73,7 @@ var saveImage = function() {
 // Resize options
 
 var optionResize = function(method){
+    
     switch(method){
         case "3x3": 
             $(".collage-wrapper").html(" "); // reset
@@ -92,8 +94,24 @@ var optionResize = function(method){
             
                
         case "display": 
-            $(".album-box p").css("color", "black");
-            $(".album-box p").css("background", "yellow");
+            
+            if( $(".album-box p").css("display") == "none" ){
+                
+                // fade in existing
+                $(".album-box p").fadeIn("slow");
+                $(".album-box p").addClass("album-display");
+                
+                
+            } else{
+                
+                 $(".album-box p").fadeOut("slow");
+                $("album-box p").css("display", "none");
+                $(".album-box p").removeClass("album-display");
+                
+            }
+            
+            //$(".album-box p").css("background", "yellow");
+            
             $(".collage-wrapper").addClass('wordDisplay')
             break;
     }
@@ -116,7 +134,7 @@ const swappable = new Draggable.Swappable(document.querySelectorAll('.collage-wr
 
 
 
-/* BUTTON LISTENERS */
+/* LISTENERS */
 
 
 // On enter, run search query
