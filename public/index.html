@@ -17,11 +17,10 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/styling.css">
     
-    <link rel="stylesheet" href="https://use.typekit.net/bgf2wdh.css">
-
 </head>
 
 <body>
+    
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -61,15 +60,14 @@
                         <form onSubmit="return false">
                             
                             <center>
-                            <input type="search" name="Album" class="input-finder" id="input-finders" placeholder="Enter an Album">
+                            <input type="search" name="Album" class="input-finder" id="input-finders" placeholder="Enter album/artist">
                             
                             <button id="generateAlbums" class="btn-generateAlbums" value="Generate" >Generate</button>
                             
-                            <div class="divider-vert"> </div>
 
-                            <button class="btn-saveimage" onclick="saveImage();">Save</button>
+                            <button class="btn-saveimage" onclick="saveImage();" title="Save a photo of your collage">Save</button>
                                 
-                               <button  class="spotify-test">Spotify </button>
+                               <button  class="spotify-test" title="Allow Spotify access to autogenerate your top songs">Spotify </button>
                             
                             </center>
                             
@@ -79,6 +77,10 @@
 
 
             </div> <!-- Header Container; with options, search, info, etc. -->
+          
+            
+            <!-- COLLLAGE; display here -->
+            
             <div class="collage-area" id="collage">
 
                 <div class="collage-title">
@@ -100,6 +102,20 @@
                     <div class="album-box alb-empty"></div>
                     <div class="album-box alb-empty"></div>
                     <div class="album-box alb-empty"></div>
+                </div>
+            </div>
+            
+             <!-- ALBUM TITLES; display here -->
+            
+            <div id="collage-names">
+                <div class="collage-names-container album-titles">
+                    
+                <div class="album-title">
+                    <strong>Car Seat Headrest</strong>&mdash;Teens of Denial
+                </div>
+                    
+                    
+                    
                 </div>
             </div>
 

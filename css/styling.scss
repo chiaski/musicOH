@@ -1,10 +1,16 @@
 /* Imports */
 
+  @import url("https://use.typekit.net/bgf2wdh.css");
+
+
 /*  Color 
     to be used for modes later on, maybe? */
 
-$bg: #0c1237;
-$white: #f3f7f6;
+$b: #1c1c21;
+
+$bg: #f6f6f6;
+$white: #171a19;
+$accent: #a09898;
 
 /* Main Styling */
 
@@ -48,7 +54,7 @@ body {
     margin: .3em;
     background-image: url();
     background-size: contain;
-    border: 1px solid #edbab9;
+    border: 1px solid $accent;
     z-index: 999;
     touch-action: manipulation;
     cursor: pointer;
@@ -88,7 +94,6 @@ body {
 
 .album-box:hover p {
     color: black !important;
-        font-weight: :hover700;
     text-align: center;
     background:yellow;
 }
@@ -144,10 +149,10 @@ body {
 
 /* collage part */
 
-.collage-area {
+#collage {
     display:flex;
-    margin-top:-2em;
-    padding-bottom:100px;
+    margin-top:-1.5em;
+    margin-bottom:1vh;
 
     
     //background: $bg;
@@ -171,12 +176,6 @@ body {
     align-content: space-between;
     justify-content: space-between;
 
-
-    .collage-row{
-      //  display:block;
-    }
-    
-    /* box sizing */
     
     .alb-size-one{
         width: calc(96% / 3);
@@ -198,6 +197,55 @@ body {
 
 
 }
+
+
+#collage-names{
+    min-height:30vh;
+    margin-bottom: 150px;
+    
+    .collage-names-container{
+        box-sizing: border-box;
+        
+        padding:.8em;
+        background:#000;
+        width:80%;
+        font-family: proxima-nova, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+   //     max-width:800px;
+        
+        margin:auto;
+        color: #fff;
+        display:flex;
+        flex-wrap: wrap;
+        
+        .album-title{
+            display:inline-block;
+            padding:.3em;
+            margin:.2em;
+            width:200px;
+        
+            background:blue;
+            
+            font-size:.8em;
+            line-height:1.2em;
+            
+        }
+        
+    }
+    
+    
+    @media  only screen and (max-width: 600px) {
+    
+        .collage-names-container{
+            width:100%;
+        }
+    
+    }
+    
+}
+
+
 
 .wordDisplay{
     color:black !important;
@@ -230,15 +278,19 @@ body {
         
         .header-title a{
             text-decoration: none;
-             color:#ebc8c7 !important;
+             color:$accent !important;
         }
     
         .options-area{
             margin-left: auto;
+            
             button{
                 background:0;
-                font-size:12px;
+                padding:0 .5em 0 .5em;
+                
+                font-size:.6em;
             }
+            
         }
     }
     
@@ -251,7 +303,7 @@ body {
 }
 
 ::placeholder{
-    color:#ebc8c7;
+    color: $accent;
 }
 
 .search-area {
@@ -270,42 +322,40 @@ body {
         height:12px;
         width:1px;
         display:inline-block;
-        background:#edbab9;
+        background: $accent;
     }
     
     button {
-    background:transparent;
+    background: $b;
+        color:#fff;
     border: 1px solid transparent;
     text-align: center !important;
-    padding: .3em 1em .3em 1em;
-    font-size: 13px;
+    padding: .2em 1em .2em 1em;
+    margin: 0 .2em 0 .2ems;
+    font-size: .7em;
     font-family: termina, sans-serif;
-    font-weight: 700;
+    font-weight: 400;
+    
     }
 
     
     button:hover{
-        background:#000;
-        color:#fff;
+        background: $accent;
     }
     
     input[type=search] {
     display: block;
     background:transparent;
     border:none;
-    border-bottom:1px solid #ebc8c7;
+    border-bottom:1px solid $accent;
     padding: .5em;
     min-width: 300px;
     text-align: center;
     margin: .4em;
-    font-family: termina, sans-serif;
+    font-family: "courier new";
     font-weight: 500 !important;
     }
     
-    .btn-saveimage {
-    margin: .3em;
-    font-size: 13px;
-    }
 }
 
 

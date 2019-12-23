@@ -64,14 +64,22 @@ var displayQuery = (function(){
 
         for (var i = 0; i < artistQuery.album.length; i++) {
 
-            var albumContent;
+            let albumContent;
+            let albumTitle;
 
             if (artistQuery.album[i].artist.name == undefined) {
                 //Query through direct artist tag
-                var albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "' data-artist='" + artistQuery.album[i].artist + "' data-album='" + artistQuery.album[i].name + "'></div>";
+                let albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "' data-artist='" + artistQuery.album[i].artist + "' data-album='" + artistQuery.album[i].name + "'></div>";
+                
+                let albumTitle = "<div class='album-title' data-artist='" + artistQuery.album[i].artist + "  data-album='" + artistQuery.album[i].name + "'><strong>" + artistQuery.album[i].artist + "</strong>&mdash;" + artistQuery.album[i].name + "</div>";
+                
+                
             } else {
                 // Query artist name regularly
-                var albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "' data-artist='" + artistQuery.album[i].artist.name + "' data-album='" + artistQuery.album[i].name + "'></div>";
+                let albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "' data-artist='" + artistQuery.album[i].artist.name + "' data-album='" + artistQuery.album[i].name + "'></div>";
+                
+                
+                let albumTitle = "<div class='album-title' data-artist='" + artistQuery.album[i].artist.name + "  data-album='" + artistQuery.album[i].name + "'><strong>" + artistQuery.album[i].artist.name + "</strong>&mdash;" + artistQuery.album[i].name + "</div>";
 
             }
 
@@ -79,7 +87,10 @@ var displayQuery = (function(){
 
             /* TODO: Consider cookies to save selection on browser reload later on */
             if (artistQuery.album[i].image[2]['#text'].length !== 0) {
+                
                 $(".album-list").append(albumContent);
+                $(".album-titles").append(albumTitle);
+                
             } else {
                 badsearch++;
             }
