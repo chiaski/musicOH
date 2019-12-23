@@ -64,22 +64,22 @@ var displayQuery = (function(){
 
         for (var i = 0; i < artistQuery.album.length; i++) {
 
-            let albumContent;
-            let albumTitle;
+            var albumContent;
+            var albumTitle;
 
             if (artistQuery.album[i].artist.name == undefined) {
                 //Query through direct artist tag
-                let albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "' data-artist='" + artistQuery.album[i].artist + "' data-album='" + artistQuery.album[i].name + "'></div>";
+                 albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "' data-artist='" + artistQuery.album[i].artist + "' data-album='" + artistQuery.album[i].name + "'></div>";
                 
-                let albumTitle = "<div class='album-title' data-artist='" + artistQuery.album[i].artist + "  data-album='" + artistQuery.album[i].name + "'><strong>" + artistQuery.album[i].artist + "</strong>&mdash;" + artistQuery.album[i].name + "</div>";
+                albumTitle = "<div class='album-title' data-artist='" + artistQuery.album[i].artist + "  data-album='" + artistQuery.album[i].name + "'><strong>" + artistQuery.album[i].artist + "</strong>&mdash;" + artistQuery.album[i].name + "</div>";
                 
                 
             } else {
                 // Query artist name regularly
-                let albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "' data-artist='" + artistQuery.album[i].artist.name + "' data-album='" + artistQuery.album[i].name + "'></div>";
+                 albumContent = "<div class='album-type album-box'><img src='" + artistQuery.album[i].image[2]['#text'] + "' data-artist='" + artistQuery.album[i].artist.name + "' data-album='" + artistQuery.album[i].name + "'></div>";
                 
                 
-                let albumTitle = "<div class='album-title' data-artist='" + artistQuery.album[i].artist.name + "  data-album='" + artistQuery.album[i].name + "'><strong>" + artistQuery.album[i].artist.name + "</strong>&mdash;" + artistQuery.album[i].name + "</div>";
+                albumTitle = "<div class='album-title' data-artist='" + artistQuery.album[i].artist.name + "  data-album='" + artistQuery.album[i].name + "'><strong>" + artistQuery.album[i].artist.name + "</strong>&mdash;" + artistQuery.album[i].name + "</div>";
 
             }
 
@@ -89,7 +89,7 @@ var displayQuery = (function(){
             if (artistQuery.album[i].image[2]['#text'].length !== 0) {
                 
                 $(".album-list").append(albumContent);
-                $(".album-titles").append(albumTitle);
+                
                 
             } else {
                 badsearch++;

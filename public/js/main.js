@@ -6,10 +6,34 @@ $(document).on("click", ".album-list img", function () {
     var album = $(this).attr('src'); // Gets image source of selected thing
     var albuminfo = $(this).data('artist') + ' ' + $(this).data('album');
 
-    console.log(albuminfo);
-    console.log(album);
+    
+    // first check if there is an empty album
+    
+    if( $(".album-box[class*='alb-empty']").first()[0] ){
+        
+        $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').html("<p>" + albuminfo + "</p>").addClass("alb-item");
+    
+    
+    let albTitle = $(this).data('album');
+    
+    /* watch out for fiona apple
+    but also fix this cause the cutoff is weird rn
+    */
+    if(albTitle.length > 40){
+        albTitle = albTitle.substr(0, 40) + "...";
+    }
+    
+    
+    let title = "<div class='album-title' data-artist='" + $(this).data('artist') + "  data-album='" + $(this).data('album') + "'><strong>" + $(this).data('artist')  + "</strong>&mdash;" + albTitle + "</div>";
+    
+    
 
-    $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').html("<p>" + albuminfo + "</p>").addClass("alb-item");
+    $(".album-titles").append(title);
+                
+        
+    }
+
+    
 
 });
 
