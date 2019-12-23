@@ -22,10 +22,10 @@ $(document).on("click", ".album-list img", function () {
     
         
         
-    $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').html("<p>" + $(this).data('artist') + "&mdash;" + albTitle + "</p>").addClass("alb-item");
+    $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + album + ')').html("<p>" + $(this).data('artist') + "&mdash;" + albTitle + "</p>").addClass("alb-item").attr("data-artist", $(this).data('artist')).attr("data-album", $(this).data('album'));
     
     
-    let title = "<div class='album-title' data-artist='" + $(this).data('artist') + "  data-album='" + $(this).data('album') + "'><strong>" + $(this).data('artist')  + "</strong>&mdash;" + albTitle + "</div>";
+    let title = "<div class='album-title' data-artist='" + $(this).data('artist') + "'  data-album='" + $(this).data('album') + "'><strong>" + $(this).data('artist')  + "</strong>&mdash;" + albTitle + "</div>";
     
     
 
@@ -34,17 +34,30 @@ $(document).on("click", ".album-list img", function () {
         
     }
 
-    
 
 });
 
 // Click to remove
 
 $(document).on("click", ".alb-item", function () {
+    
+    
+    let artTitle = $(this).attr('data-artist');
+    let albTitle = $(this).attr('data-album');
+    
+    console.log(artTitle + albTitle);
+    
     if (window.outerWidth < 500) {
         $(this).css('background-image', '').html('').removeClass('alb-item').addClass('alb-empty');
     }
+    
     $(this).css('background-image', '').html('').removeClass('alb-item').addClass('alb-empty');
+    
+    console.log($(".album-titles").find("div[data-artist='" + artTitle + "'][data-album='" + albTitle + "']").first()[0]);
+    
+    $(".album-titles").find("[data-artist='" + artTitle + "'][data-album='" + albTitle + "']")[0].remove();
+    
+    
 });
 
 
