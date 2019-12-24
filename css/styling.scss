@@ -28,7 +28,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x:hidden;
-    font-family: proxima-nova, sans-serif;
+    font-family: "Sailec";
     font-weight: 400;
     font-style: normal;
 }
@@ -168,7 +168,6 @@ body {
     //background: $bg;
     /*animation: colorchange 30s infinite;
     -webkit-animation: colorchange 30s infinite;*/
-    
 
     text-align: center;
 
@@ -211,7 +210,7 @@ body {
 
 #collage-names{
     min-height:30vh;
-    margin-bottom: 5vh;
+    border-bottom:100px solid $bg;
     
     .collage-names-container{
         box-sizing: border-box;
@@ -219,7 +218,7 @@ body {
         padding:.8em;
         background:#000;
         width:80%;
-        font-family: proxima-nova, sans-serif;
+        font-family:"Sailec";
         font-weight: 400;
         font-style: normal;
    //     max-width:800px;
@@ -230,16 +229,12 @@ body {
         flex-wrap: wrap;
         
         .album-title{
-            display:inline-block;
             padding:.3em;
             margin:.2em;
-            width:200px;
-        
-            background:blue;
+            width:180px;
             
             font-size:.8em;
             line-height:1.2em;
-            
         }
         
     }
@@ -294,10 +289,17 @@ body {
             margin-left: auto;
             
             button{
-                background:0;
+                
+                font-family:"Sailec";
+                        
+                background: #fff;
                 padding:0 .5em 0 .5em;
                 
-                font-size:.6em;
+                font-size:.7em;
+                font-weight:400;
+                
+                border:0;
+                
             }
             
         }
@@ -339,11 +341,10 @@ body {
         color:#fff;
     border: 1px solid transparent;
     text-align: center !important;
-    padding: .2em 1em .2em 1em;
+    padding: .2em .7em .2em .7em;
     margin: 0 .2em 0 .2ems;
-    font-size: .7em;
-    font-family: termina, sans-serif;
-    font-weight: 400;
+    font-size: .8em;
+    font-family:"Sailec";
     
     }
 
@@ -361,8 +362,8 @@ body {
     min-width: 300px;
     text-align: center;
     margin: .4em;
-    font-family: "courier new";
-    font-weight: 500 !important;
+    font-family:"Sailec";
+    font-weight: 500 ;
     }
     
 }
@@ -378,20 +379,19 @@ body {
     top:50%; left:50%;
     margin-top: -15vh;
     margin-left: -20vw;
-    padding:.5em;
+    
     z-index:9999;
     padding:1em;
     width:40vw;
     background:#000 !important;
     color:#ebf6f7;
-    font-family:"Work Sans";
     line-height:1.4em;
     border:1px solid #000;
     
     h1{
         margin:0;
         text-align: center;
-        font-family:"Work Sans";
+        font-family:"Sailec";
     }
     
     strong{
@@ -427,4 +427,72 @@ body {
     }
 
 
+
+
+/* Fonts */
+
+
+@font-face {
+    font-family: 'Sailec-RegularItalic';
+    src: url('http://chia.dev/musicOH/fonts/Sailec-RegularItalic.woff2') format('woff2'),
+        url('http://chia.dev/musicOH/fonts/Sailec-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('http://chia.dev/musicOH/fonts/Sailec-BoldItalic.woff2') format('woff2'),
+        url('http://chia.dev/musicOH/fonts/Sailec-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('http://chia.dev/musicOH/fonts/Sailec-Medium.woff2') format('woff2'),
+        url('http://chia.dev/musicOH/fonts/Sailec-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('http://chia.dev/musicOH/fonts/Sailec-BoldItalic.woff2') format('woff2'),
+        url('http://chia.dev/musicOH/fonts/Sailec-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('http://chia.dev/musicOH/fonts/Sailec-BlackItalic.woff2') format('woff2'),
+        url('http://chia.dev/musicOH/fonts/Sailec-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('http://chia.dev/musicOH/fonts/Sailec-MediumItalic.woff2') format('woff2'),
+        url('http://chia.dev/musicOH/fonts/Sailec-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('http://chia.dev/musicOH/fonts/Sailec-Regular.woff2') format('woff2'),
+        url('http://chia.dev/musicOH/fonts/Sailec-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('http://chia.dev/musicOH/fonts/Sailec-Black.woff2') format('woff2'),
+        url('http://chia.dev/musicOH/fonts/Sailec-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
 

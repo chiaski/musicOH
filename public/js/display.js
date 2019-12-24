@@ -86,7 +86,6 @@ var displayQuery = (function(){
                 
                 $(".album-list").append(albumContent);
                 
-                
             } else {
                 badsearch++;
             }
