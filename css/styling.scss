@@ -141,12 +141,24 @@ body {
     overflow-y: hidden;
     display: flex;
     align-items: baseline;
-    background: black;
+    background-image:url(https://chia.dev/musicOH/cover.png);
+    background-position: bottom;
+    background-repeat: repeat-x;
     
     .album-type{
-        height:120px !important;
-        width:120px !important;
+        height:115px !important;
+        width:115px !important;
+        box-shadow: 0 -10px 20px rgba(180, 140, 140, 0.31);
         margin-right:-1em;
+        -webkit-transition: all .1s ease-in-out;
+        -moz-transition: all .1s ease-in-out;
+        -ms-transition: all .1s ease-in-out;
+        -o-transition: all .1s ease-in-out;
+        transition: all .1s ease-in-out;
+    }
+    
+    .album-type:hover{
+        transform: translate(0, -1em);
     }
     
     .album-type img {
@@ -213,7 +225,7 @@ body {
 
 #collage-names{
     min-height:30vh;
-    border-bottom:100px solid $bg;
+    border-bottom:100px solid transparent;
     
     .collage-names-container{
         box-sizing: border-box;
@@ -230,12 +242,13 @@ body {
         color: #fff;
         display:flex;
         flex-wrap: wrap;
+        justify-content: center;
+        
         
         .album-title{
             padding:.3em;
             margin:.2em;
-            width:180px;
-            
+            width:200px;
             font-size:.8em;
             line-height:1.2em;
         }
