@@ -76,9 +76,10 @@ body {
         text-align: center;
         box-sizing: border-box;
         padding: .5em;
+        
         background-color: $accent;
-        color: #000;
-        text-shadow:0 0 20px #000;       
+        color: #000;     
+        
         display:none;
 
 
@@ -94,10 +95,6 @@ body {
         display:block;
     }
     
-    .album-nodisplay{
-        display:none;
-    }
-
 }
 
 
@@ -214,7 +211,7 @@ body {
 
 #collage-names{
     min-height:30vh;
-    margin-bottom: 150px;
+    margin-bottom: 5vh;
     
     .collage-names-container{
         box-sizing: border-box;

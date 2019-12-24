@@ -54,7 +54,6 @@ body {
     padding: .5em;
     background-color: #a09898;
     color: #000;
-    text-shadow: 0 0 20px #000;
     display: none;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -64,8 +63,6 @@ body {
     user-select: none; }
   .album-box .album-display {
     display: block; }
-  .album-box .album-nodisplay {
-    display: none; }
 
 .alb-item {
   touch-action: manipulation; }
@@ -141,7 +138,7 @@ body {
 
 #collage-names {
   min-height: 30vh;
-  margin-bottom: 150px; }
+  margin-bottom: 5vh; }
   #collage-names .collage-names-container {
     box-sizing: border-box;
     padding: .8em;
