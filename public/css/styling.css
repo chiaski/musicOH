@@ -20,6 +20,7 @@ body {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
+  border-bottom: 100px solid transparent;
   overflow-x: hidden; }
 
 /* Draggable */
@@ -38,7 +39,7 @@ body {
   cursor: pointer;
   position: relative;
   font-family: "Sailec", sans-serif !important;
-  font-weight: 100;
+  font-weight: 300;
   /* Overlay title display */ }
   .album-box p {
     position: absolute;
@@ -53,7 +54,7 @@ body {
     box-sizing: border-box;
     padding: .5em;
     background-color: rgba(0, 0, 0, 0.5);
-    color: #f6f6f6;
+    color: #f2e7e7 !important;
     display: none;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -69,11 +70,11 @@ body {
 
 .album-box:hover p {
   background-color: rgba(0, 0, 0, 0.5);
-  color: #f2e7e7;
+  color: #f2e7e7 !important;
   display: block; }
 
 .album-box:hover {
-  color: #f2e7e7;
+  color: #f2e7e7 !important;
   text-shadow: 0 0 20px #000; }
 
 .collage-wrapper > .album-box:before {
@@ -118,12 +119,17 @@ body {
   border: none; }
 
 /* collage part */
+#collage-container {
+  animation: colorchange 30s infinite;
+  -webkit-animation: colorchange 30s infinite;
+  width: 75vh;
+  max-width: 100%;
+  margin: auto; }
+
 #collage {
   display: flex;
   margin-top: -1.5em;
   margin-bottom: 1vh;
-  animation: colorchange 30s infinite;
-  -webkit-animation: colorchange 30s infinite;
   text-align: center; }
 
 .collage-wrapper {
@@ -156,8 +162,7 @@ body {
     margin: 0 .1em -.2em .1em; }
 
 #collage-names {
-  min-height: 30vh;
-  border-bottom: 100px solid transparent; }
+  min-height: 30vh; }
   #collage-names .collage-names-container {
     box-sizing: border-box;
     padding: .8em;

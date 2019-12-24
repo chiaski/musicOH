@@ -98,13 +98,16 @@ var saveImage = function () {
         });
 
     /* Append image to a div */
-    domtoimage.toPng(document.getElementById('collage')).then(function (dataUrl) {
+   
+    
+   /* domtoimage.toPng(document.getElementById('collage')).then(function (dataUrl) {
         var img = new Image();
         img.src = dataUrl;
         $("#image-test").append(img);
     }).catch(function (error) {
         console.error('oops, something went wrong!', error);
     });
+    */
 
 }
 
