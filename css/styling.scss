@@ -19,11 +19,12 @@ $accent: #a09898;
 body {
     background: $bg;
     color: $white;
-    //animation: colorchange 30s infinite;
-    /* animation-name followed by duration in seconds*/
-    /* you could also use milliseconds (ms) or something like 2.5s */
-    //-webkit-animation: colorchange 30s infinite;
-    /* Chrome and Safari */
+    
+    
+    animation: colorchange 30s infinite;
+    -webkit-animation: colorchange 30s infinite;
+    
+    
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -59,7 +60,8 @@ body {
     touch-action: manipulation;
     cursor: pointer;
     position: relative;
-        font-family: termina, sans-serif !important;
+    font-family: "Sailec", sans-serif !important;
+    font-weight:100;
 
 
     /* Overlay title display */
@@ -71,14 +73,14 @@ body {
         width:100%;
         margin:auto;
         font-size: .7em;
-        line-height: 1em;
+        line-height: 1.15em;
         
         text-align: center;
         box-sizing: border-box;
         padding: .5em;
         
-        background-color: $accent;
-        color: #000;     
+        background-color: rgba(0, 0, 0, 0.5);
+        color: $bg;     
         
         display:none;
 
@@ -103,9 +105,10 @@ body {
 }
 
 .album-box:hover p {
-    color: black !important;
-    text-align: center;
-    background:yellow;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $bg;     
+    
+    display:block;
 }
 
 .album-box:hover {
@@ -165,9 +168,9 @@ body {
     margin-bottom:1vh;
 
     
-    //background: $bg;
-    /*animation: colorchange 30s infinite;
-    -webkit-animation: colorchange 30s infinite;*/
+    animation: colorchange 30s infinite;
+    -webkit-animation: colorchange 30s infinite;
+    
 
     text-align: center;
 
@@ -358,10 +361,10 @@ body {
     background:transparent;
     border:none;
     border-bottom:1px solid $accent;
-    padding: .5em;
+    padding: .3em;
     min-width: 300px;
     text-align: center;
-    margin: .4em;
+    margin: .7em;
     font-family:"Sailec";
     font-weight: 500 ;
     }
@@ -495,4 +498,104 @@ body {
     font-weight: 900;
     font-style: normal;
 }
+
+/* Rainbow */
+
+
+
+@keyframes colorchange {
+    0% {
+        background: #f4dfe2;
+    }
+
+    10% {
+        background: #f5dccc;
+    }
+
+    20% {
+        background: #f5f3cc;
+    }
+
+    30% {
+        background: #c3e7c4;
+    }
+
+    40% {
+        background: #c3e7e7;
+    }
+
+    50% {
+        background: #c3d6e7;
+    }
+
+    60% {
+        background: #bdbdee;
+    }
+
+    70% {
+        background: #e0d6ed;
+    }
+
+    80% {
+        background: #ecd6f2;
+    }
+
+    90% {
+        background: #f4cee7;
+    }
+
+    100% {
+        background: #f4dfe2;
+    }
+}
+
+@-webkit-keyframes colorchange
+
+/* Safari and Chrome - necessary duplicate */
+    {
+    0% {
+        background: #f4dfe2;
+    }
+
+    10% {
+        background: #f5dccc;
+    }
+
+    20% {
+        background: #f5f3cc;
+    }
+
+    30% {
+        background: #c3e7c4;
+    }
+
+    40% {
+        background: #c3e7e7;
+    }
+
+    50% {
+        background: #c3d6e7;
+    }
+
+    60% {
+        background: #bdbdee;
+    }
+
+    70% {
+        background: #e0d6ed;
+    }
+
+    80% {
+        background: #ecd6f2;
+    }
+
+    90% {
+        background: #f4cee7;
+    }
+
+    100% {
+        background: #f4dfe2;
+    }
+}
+
 
