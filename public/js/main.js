@@ -136,6 +136,34 @@ var optionResize = function (method) {
             }
 
             break;
+            
+        case "top42":
+            
+            $(".collage-wrapper").html(" "); // reset
+            $(".album-titles").html(" ");
+              
+            
+            
+             for (let i = 0; i < 10; i++) {
+                
+                $(".collage-wrapper")
+                    .append('<div class="album-box alb-empty alb-size-two"></div>');
+            }
+            
+             for (let i = 0; i < 12; i++) {
+                
+                $(".collage-wrapper")
+                    .append('<div class="album-box alb-empty alb-sized-six"></div>');
+            }
+            
+            
+             for (let i = 0; i < 20; i++) {
+                
+                $(".collage-wrapper")
+                    .append('<div class="album-box alb-empty alb-sized-ten"></div>');
+            }
+            
+            break;
 
 
         case "display":
@@ -208,6 +236,10 @@ $('.options-area *[data-id="3x3"]').click(function () {
 
 $('.options-area *[data-id="5x5"]').click(function () {
     optionResize("5x5");
+});
+
+$('.options-area *[data-id="top42"]').click(function () {
+    optionResize("top42");
 });
 
 $('.options-area *[data-id="display"]').click(function () {
