@@ -116,6 +116,7 @@ var optionResize = function (method) {
     switch (method) {
         case "3x3":
             $(".collage-wrapper").html(" "); // reset
+            $(".album-titles").html(" ");
             for (let i = 0; i < 9; i++) {
                 
                 $(".collage-wrapper")
@@ -127,6 +128,7 @@ var optionResize = function (method) {
 
         case "5x5":
             $(".collage-wrapper").html(" "); // reset
+            $(".album-titles").html(" ");
             for (let i = 0; i < 25; i++) {
                 
                 $(".collage-wrapper")
