@@ -91,7 +91,7 @@ $(document).on("click", ".alb-item", function () {
 
 
 var saveImage = function () {
-    domtoimage.toBlob(document.getElementById('collage'))
+    domtoimage.toBlob(document.getElementById('collage-container'))
         .then(function (blob) {
             window.saveAs(blob, 'collageOH.png');
 
