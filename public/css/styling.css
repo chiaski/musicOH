@@ -121,7 +121,7 @@ body {
 /* collage part */
 #collage-container {
   padding-top: .5em;
-  width: 70vh;
+  width: 75vh;
   max-width: 100%;
   margin: auto; }
 
@@ -144,8 +144,8 @@ body {
     width: calc(96% / 3);
     height: calc(96% / 3); }
   .collage-wrapper .alb-size-two {
-    width: calc(93% / 5);
-    height: calc(93% / 5);
+    width: calc(91% / 5);
+    height: calc(91% / 5);
     margin: 0 .2em 0 .2em; }
   .collage-wrapper .alb-size-three {
     width: calc(92% / 7);
@@ -156,8 +156,8 @@ body {
     height: calc(92% / 6);
     margin: 0 .15em 0 .15em; }
   .collage-wrapper .alb-sized-ten {
-    width: calc(92% / 10);
-    height: calc(92% / 10);
+    width: calc(91% / 10);
+    height: calc(91% / 10);
     margin: 0 .1em -.2em .1em; }
 
 #collage-names {
