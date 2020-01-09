@@ -1,6 +1,5 @@
-
-// Handles display calls
 var displayQuery = (function(){
+// Handles display calls 
     console.log("This is display.");
 
     var artistSearch; // e.g. "Car Seat Headrest"
