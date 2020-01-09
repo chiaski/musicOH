@@ -274,7 +274,8 @@ body {
   margin-left: -20vw;
   z-index: 9999;
   padding: 1em;
-  width: 40vw;
+  width: 100vw;
+  max-width: 400px;
   background: #000 !important;
   color: #ebf6f7;
   line-height: 1.4em;
