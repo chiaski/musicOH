@@ -1,7 +1,7 @@
 /* Imports */
 
   @import url("https://use.typekit.net/bgf2wdh.css");
-
+         
 
 /*  Color 
     to be used for modes later on, maybe? */
@@ -29,7 +29,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x:hidden;
-    font-family: "Proxima Nova", ;
+font-family: futura-pt, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -53,7 +53,7 @@ body {
 .album-box {
     display: inline-block;
     box-sizing: border-box;
-    margin: .3em;
+    margin: .1em .2em;
     background-image: url();
     background-size: contain;
     border: 1px solid $accent;
@@ -61,7 +61,7 @@ body {
     touch-action: manipulation;
     cursor: pointer;
     position: relative;
-    font-family: "Proxima Nova", sans-serif !important;
+font-family: futura-pt, sans-serif;
     font-weight:300;
 
 
@@ -177,10 +177,11 @@ body {
 /* collage part */
 
 #collage-container{
-    animation: colorchange 30s infinite;
-    -webkit-animation: colorchange 30s infinite;
+ //   animation: colorchange 30s infinite;
+//    -webkit-animation: colorchange 30s infinite;
     
-    width:75vh;
+    padding-top:.5em;
+    width:70vh;
     max-width:100%;
     margin:auto;
     
@@ -202,7 +203,7 @@ body {
 
     margin:auto;   
     width:100vw;
-    padding:1em;
+    padding:.5em;
     max-width:75vh !important;
     align-content: space-around;
     justify-content: space-around;
@@ -255,7 +256,7 @@ body {
         padding:.8em;
         background:#000;
         width:80%;
-        font-family:"Proxima Nova";
+font-family: futura-pt, sans-serif;
         font-weight: 400;
         font-style: normal;
    //     max-width:800px;
@@ -333,8 +334,7 @@ body {
             
             button{
                 
-                font-family:"Proxima Nova";
-                        
+                font-family: futura-pt, sans-serif;
                 background: #fff;
                 padding:0 .5em 0 .5em;
                 
@@ -343,6 +343,11 @@ body {
                 
                 border:0;
                 
+            }
+            
+            button:hover{
+                background: #000;
+                color: #fff;
             }
             
         }
@@ -387,13 +392,14 @@ body {
     padding: .2em .7em .2em .7em;
     margin: 0 .2em 0 .2ems;
     font-size: .8em;
-    font-family:"Proxima Nova";
+font-family: futura-pt, sans-serif;
     
     }
 
     
     button:hover{
         background: $accent;
+        color:#000;
     }
     
     input[type=search] {
@@ -405,7 +411,7 @@ body {
     min-width: 300px;
     text-align: center;
     margin: .7em;
-    font-family:"Proxima Nova";
+font-family: futura-pt, sans-serif;
     font-weight: 500 ;
     }
     
@@ -435,7 +441,7 @@ body {
     h1{
         margin:0;
         text-align: center;
-        font-family:"Proxima Nova";
+        font-family: futura-pt, sans-serif;
     }
     
     strong{

@@ -12,7 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  font-family: "Proxima Nova";
+  font-family: futura-pt, sans-serif;
   font-weight: 400;
   font-style: normal; }
 
@@ -30,7 +30,7 @@ body {
 .album-box {
   display: inline-block;
   box-sizing: border-box;
-  margin: .3em;
+  margin: .1em .2em;
   background-image: url();
   background-size: contain;
   border: 1px solid #a09898;
@@ -38,7 +38,7 @@ body {
   touch-action: manipulation;
   cursor: pointer;
   position: relative;
-  font-family: "Proxima Nova", sans-serif !important;
+  font-family: futura-pt, sans-serif;
   font-weight: 300;
   /* Overlay title display */ }
   .album-box p {
@@ -120,9 +120,8 @@ body {
 
 /* collage part */
 #collage-container {
-  animation: colorchange 30s infinite;
-  -webkit-animation: colorchange 30s infinite;
-  width: 75vh;
+  padding-top: .5em;
+  width: 70vh;
   max-width: 100%;
   margin: auto; }
 
@@ -137,7 +136,7 @@ body {
   box-sizing: border-box;
   margin: auto;
   width: 100vw;
-  padding: 1em;
+  padding: .5em;
   max-width: 75vh !important;
   align-content: space-around;
   justify-content: space-around; }
@@ -168,7 +167,7 @@ body {
     padding: .8em;
     background: #000;
     width: 80%;
-    font-family: "Proxima Nova";
+    font-family: futura-pt, sans-serif;
     font-weight: 400;
     font-style: normal;
     margin: auto;
@@ -211,12 +210,15 @@ body {
   .header-container .header-bar .options-area {
     margin-left: auto; }
     .header-container .header-bar .options-area button {
-      font-family: "Proxima Nova";
+      font-family: futura-pt, sans-serif;
       background: #fff;
       padding: 0 .5em 0 .5em;
       font-size: .7em;
       font-weight: 400;
       border: 0; }
+    .header-container .header-bar .options-area button:hover {
+      background: #000;
+      color: #fff; }
 
 @media only screen and (max-width: 600px) {
   .header-container .header-bar {
@@ -249,9 +251,10 @@ body {
     padding: .2em .7em .2em .7em;
     margin: 0 .2em 0 .2ems;
     font-size: .8em;
-    font-family: "Proxima Nova"; }
+    font-family: futura-pt, sans-serif; }
   .search-area button:hover {
-    background: #a09898; }
+    background: #a09898;
+    color: #000; }
   .search-area input[type=search] {
     display: block;
     background: transparent;
@@ -261,7 +264,7 @@ body {
     min-width: 300px;
     text-align: center;
     margin: .7em;
-    font-family: "Proxima Nova";
+    font-family: futura-pt, sans-serif;
     font-weight: 500; }
 
 /* ETCETERA */
@@ -283,7 +286,7 @@ body {
   .pop-up h1 {
     margin: 0;
     text-align: center;
-    font-family: "Proxima Nova"; }
+    font-family: futura-pt, sans-serif; }
   .pop-up strong {
     border-bottom: 1px solid #fff; }
   @media only screen and (max-width: 800px) {
