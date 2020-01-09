@@ -29,7 +29,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x:hidden;
-    font-family: "Sailec";
+    font-family: "Proxima Nova", ;
     font-weight: 400;
     font-style: normal;
 }
@@ -61,7 +61,7 @@ body {
     touch-action: manipulation;
     cursor: pointer;
     position: relative;
-    font-family: "Sailec", sans-serif !important;
+    font-family: "Proxima Nova", sans-serif !important;
     font-weight:300;
 
 
@@ -255,7 +255,7 @@ body {
         padding:.8em;
         background:#000;
         width:80%;
-        font-family:"Sailec";
+        font-family:"Proxima Nova";
         font-weight: 400;
         font-style: normal;
    //     max-width:800px;
@@ -333,7 +333,7 @@ body {
             
             button{
                 
-                font-family:"Sailec";
+                font-family:"Proxima Nova";
                         
                 background: #fff;
                 padding:0 .5em 0 .5em;
@@ -387,7 +387,7 @@ body {
     padding: .2em .7em .2em .7em;
     margin: 0 .2em 0 .2ems;
     font-size: .8em;
-    font-family:"Sailec";
+    font-family:"Proxima Nova";
     
     }
 
@@ -405,7 +405,7 @@ body {
     min-width: 300px;
     text-align: center;
     margin: .7em;
-    font-family:"Sailec";
+    font-family:"Proxima Nova";
     font-weight: 500 ;
     }
     
@@ -435,7 +435,7 @@ body {
     h1{
         margin:0;
         text-align: center;
-        font-family:"Sailec";
+        font-family:"Proxima Nova";
     }
     
     strong{
@@ -475,70 +475,6 @@ body {
 
 /* Fonts */
 
-
-@font-face {
-    font-family: 'Sailec-RegularItalic';
-    src: url('http://chia.dev/musicOH/fonts/Sailec-RegularItalic.woff2') format('woff2'),
-        url('http://chia.dev/musicOH/fonts/Sailec-RegularItalic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Sailec';
-    src: url('http://chia.dev/musicOH/fonts/Sailec-BoldItalic.woff2') format('woff2'),
-        url('http://chia.dev/musicOH/fonts/Sailec-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Sailec';
-    src: url('http://chia.dev/musicOH/fonts/Sailec-Medium.woff2') format('woff2'),
-        url('http://chia.dev/musicOH/fonts/Sailec-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Sailec';
-    src: url('http://chia.dev/musicOH/fonts/Sailec-BoldItalic.woff2') format('woff2'),
-        url('http://chia.dev/musicOH/fonts/Sailec-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Sailec';
-    src: url('http://chia.dev/musicOH/fonts/Sailec-BlackItalic.woff2') format('woff2'),
-        url('http://chia.dev/musicOH/fonts/Sailec-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Sailec';
-    src: url('http://chia.dev/musicOH/fonts/Sailec-MediumItalic.woff2') format('woff2'),
-        url('http://chia.dev/musicOH/fonts/Sailec-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Sailec';
-    src: url('http://chia.dev/musicOH/fonts/Sailec-Regular.woff2') format('woff2'),
-        url('http://chia.dev/musicOH/fonts/Sailec-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Sailec';
-    src: url('http://chia.dev/musicOH/fonts/Sailec-Black.woff2') format('woff2'),
-        url('http://chia.dev/musicOH/fonts/Sailec-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-}
 
 /* Rainbow */
 
