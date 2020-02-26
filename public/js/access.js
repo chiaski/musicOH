@@ -1,5 +1,59 @@
 /* INTEGRATIONS */
 
+var funcLastfm = (function(){
+    
+    
+    function initial() {
+        
+        $(".lastfm-space").toggle("slow").css("display", "inline");
+
+    }
+    
+    function query(){
+        
+        var username = $(".lastfm-field").val();
+        console.log("User:", username);
+            // Make a call using the token
+        $.ajax({
+           url: "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=" + username +  "&api_key=5c0ce5912ef0fde62911dc193c3ffb04&format=json",
+           type: "GET",
+           success: function(data) { 
+             // Do something with the returned data
+               console.log(data);
+               
+               
+            let boxCount = $(".album-box[class*='alb-empty']").length;
+               
+            data.topalbums.album.slice(0, boxCount).map(function(album) {
+                
+                
+                 console.log(album);
+                
+                let image = album.image[3]["#text"];
+                let albuminfo = album.name + " - " + album.artist.name;
+                
+                $(".album-box[class*='alb-empty']").first().removeClass('alb-empty').css('background-image', 'url(' + image + ')').css('background-size', 'contain').html("<p>" + albuminfo + "</p>").addClass("alb-item");
+                
+             });
+
+           }
+        });
+        
+        $(".lastfm-space").hide();
+        
+
+    }
+    
+    
+    
+    
+    return {
+        initial: initial,
+        query: query
+    };
+    
+    
+})();
 
 
 var funcSpotify = (function(){
@@ -77,5 +131,12 @@ $('.spotify-test').click(function(){
     
     // https://accounts.spotify.com/authorize?client_id=4f64af93d86a47febcb27f17d20e4044&redirect_uri=http:%2F%2Flocalhost:8080%2Fpublic%2F&scope=user-read-private%20user-read-email&response_type=token&state=123
     funcSpotify();
+    
+});
+
+$('.lastfm-test').click(function(){
+    
+    // https://accounts.spotify.com/authorize?client_id=4f64af93d86a47febcb27f17d20e4044&redirect_uri=http:%2F%2Flocalhost:8080%2Fpublic%2F&scope=user-read-private%20user-read-email&response_type=token&state=123
+    funcLastfm.initial();
     
 });

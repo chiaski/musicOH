@@ -65,12 +65,26 @@
                             <center>
                             <input type="search" name="Album" class="input-finder" id="input-finders" placeholder="Enter album/artist">
                             
-                            <button id="generateAlbums" class="btn-generateAlbums" value="Generate" >Generate</button>
+                            <button id="generateAlbums" class="btn-generateAlbums" value="Generate" >Search</button>
                             
 
                             <button class="btn-saveimage" onclick="saveImage();" title="Save a photo of your collage">Save</button>
                                 
-                               <button  class="spotify-test" style="background:#28d866;color:#1a1936;" title="Allow Spotify access to autogenerate your top songs">Spotify </button>
+                                <br>
+                                
+                                &nbsp;&nbsp;
+                                
+                            <button  class="spotify-test" style="background:#28d866;color:#1a1936;" title="Allow Spotify access to autogenerate your top songs">Spotify </button>
+                            
+                            <button class="lastfm-test" style="background:#cc2424;color:#f7f5ef;" title="Insert your Last.fm username">Last.fm </button>
+                                
+                            <div class="lastfm-space">
+                            
+                    <input class="lastfm-field" type="text" placeholder="Last.fm username here">
+                            
+                            <button class="lastfm-generate" onclick="funcLastfm.query()">Last.fm</button>
+                                
+                            </div>
                             
                             </center>
                             
